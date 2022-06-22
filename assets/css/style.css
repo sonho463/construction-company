@@ -577,16 +577,9 @@ a:hover img {
 }
 
 .c-inner {
-  max-width: 1194px;
-  width: 90%;
+  width: 89.3%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 90px;
-}
-@media screen and (min-width:480px) {
-  .c-inner {
-    width: 100%;
-  }
 }
 
 .c-section {
