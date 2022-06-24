@@ -1,9 +1,10 @@
 @use "../foundation/variables" as v;
 
 .l-header{
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top:0;
-	background-color: blue;
+	background-color: transparent;
 	display: flex;
 	justify-content: space-between;
 	padding: 15px 5.3%;
