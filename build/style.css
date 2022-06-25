@@ -607,23 +607,50 @@ a:hover img {
 .l-footer {
   position: relative;
   width: 100%;
-  background-color: #b0c4de;
-  padding: 20px 5%;
+  background-color: #182848;
+  padding: 40px 6.4% 0;
+  color: #fff;
 }
 
 .l-footer__logo {
-  width: 18%;
+  margin-top: 81px;
+  width: 42.4%;
 }
 
-.l-footer__nav {
-  position: absolute;
-  bottom: 20px;
-  left: 5%;
+.l-footer__menu:nth-of-type(2) {
+  margin-top: 50px;
 }
 
-.l-footer__menu__item {
-  font-size: 3.2rem;
-  font-family: "Lato", "Noto Sans JP", sans-serif;
+.l-footer__item__text {
+  font-family: NotoSansJP;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.5;
+  letter-spacing: normal;
+}
+
+.l-footer__name {
+  margin-top: 23px;
+}
+
+.l-footer__copyright {
+  margin-top: 43px;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  height: 42px;
+  padding: 15px 5.3% 16px;
+  background-color: #191919;
+  font-family: NotoSansJP;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
 }
 
 .c-inner {
@@ -644,7 +671,6 @@ a:hover img {
   font-family: Lato;
   font-size: 32px;
   font-weight: bold;
-  text-align: left;
   color: #191919;
 }
 .c-section__ja-heading {
@@ -652,7 +678,6 @@ a:hover img {
   font-family: NotoSansJP;
   font-size: 20px;
   font-weight: 500;
-  text-align: left;
   color: #4b6cb7;
 }
 .c-section__ja-heading::before {
@@ -665,7 +690,6 @@ a:hover img {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.625;
-  text-align: left;
   color: #191919;
 }
 .c-section__desc {
@@ -674,7 +698,6 @@ a:hover img {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.28px;
-  text-align: left;
   color: #191919;
 }
 
@@ -908,7 +931,6 @@ a:hover img {
   font-style: normal;
   line-height: 1;
   letter-spacing: normal;
-  text-align: left;
   color: #b8614b;
 }
 .p-works__item__desc {
@@ -920,6 +942,88 @@ a:hover img {
   font-style: normal;
   line-height: 2;
   letter-spacing: 0.28px;
-  text-align: left;
   color: #191919;
+}
+
+.p-recruit {
+  margin-top: 124px;
+}
+.p-recruit .c-button {
+  margin-top: 40px;
+}
+
+.p-recruit__menu-list {
+  margin-top: 15px;
+}
+
+.p-recruit__item__bg {
+  display: block;
+  background-size: cover;
+  height: 200px;
+  padding: 168px 0 16px 21px;
+}
+.p-recruit__item:first-of-type {
+  background-image: url(../images/SP-assets/image-recruit-1.jpg);
+}
+.p-recruit__item:nth-of-type(2) {
+  background-image: url(../images/SP-assets/image-recruit-2.jpg);
+}
+.p-recruit__item:nth-of-type(3) {
+  background-image: url(../images/SP-assets/image-recruit-3.jpg);
+}
+.p-recruit__item__heading {
+  margin: 0 10px 0 0;
+  font-family: NotoSansJP;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.p-contact {
+  margin-top: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-image: url(../images/SP-assets/background-image-contact.jpg);
+  background-size: cover;
+}
+
+.p-contact .c-section__en-heading,
+.p-contact .c-section__ja-heading,
+.p-contact .c-section__desc {
+  color: #fff;
+}
+
+.p-contact__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 48px;
+  margin: 32px 0 24px;
+  padding: 18px 24px 15px;
+  -webkit-box-shadow: 0px 2px 4px 0 rgba(25, 25, 25, 0.46);
+          box-shadow: 0px 2px 4px 0 rgba(25, 25, 25, 0.46);
+}
+.p-contact__link::before {
+  content: "a";
+}
+.p-contact__link::after {
+  content: "→";
+}
+
+.p-contact__item:first-of-type .p-contact__link {
+  background-color: #b8614b;
+}
+.p-contact__item:last-of-type .p-contact__link {
+  background-color: #191919;
 }

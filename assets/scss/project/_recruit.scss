@@ -1,2 +1,42 @@
 @use "../foundation/variables" as v;
 
+.p-recruit{
+	margin-top: 124px;
+	.c-button{
+		margin-top: 40px;
+	}
+}
+
+.p-recruit__menu-list{
+	margin-top: 15px;
+}
+
+.p-recruit__item{
+	&__bg{
+		display: block;
+		background-size: cover;
+		height: 200px;
+		padding: 168px 0 16px 21px;
+	}
+	&:first-of-type{
+		background-image: url(../images/SP-assets/image-recruit-1.jpg);
+	}
+	&:nth-of-type(2){
+		background-image: url(../images/SP-assets/image-recruit-2.jpg);
+	}
+	&:nth-of-type(3){
+		background-image: url(../images/SP-assets/image-recruit-3.jpg);
+	}
+	&__heading{
+			margin: 0 10px 0 0;
+			font-family: NotoSansJP;
+			font-size: 16px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1;
+			letter-spacing: normal;
+			text-align: left;
+			color: #fff;
+	}
+}
