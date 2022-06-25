@@ -17,12 +17,15 @@
 // *--------------*
 @use "./component/inner";
 @use "./component/section";
+@use "./component/button";
 
 // *--------------*
 // project
 // *--------------*
 @use "./project/mv";
 @use "./project/services";
+@use "./project/about";
+@use "./project/works";
 
 // *--------------*
 // utility

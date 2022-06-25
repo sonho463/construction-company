@@ -1,0 +1,29 @@
+@use "../foundation/variables" as v;
+
+.c-button {
+  display: inline-block;
+  width: 68.3%;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: v.$main-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 2px 2px rgba(24, 40, 72, 0.5));
+  &::after {
+    content: "→";
+  }
+  &__text {
+    margin: 0 18px 0 0;
+    font-family: NotoSansJP;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+}
