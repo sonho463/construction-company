@@ -1,0 +1,10 @@
+@use "../foundation/variables" as v;
+
+.p-services__content{
+  background: linear-gradient(
+		115deg, #f0f0f0 0%, #f0f0f0 60%, white 60%, white 60%, white 90%, #f0f0f0 90%);
+}
+
+.p-services__text-content{
+	margin-top: 40px;
+}

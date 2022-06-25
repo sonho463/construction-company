@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v2.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -631,77 +632,50 @@ a:hover img {
   margin-right: auto;
 }
 
-.c-section {
-  padding-top: 90px;
+.c-section__heading-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
-.c-section:nth-of-type(odd) {
-  background-color: #4b6cb7;
+.c-section__en-heading {
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: left;
+  color: #191919;
+}
+.c-section__ja-heading {
+  margin-left: 7px;
+  font-family: NotoSansJP;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  color: #4b6cb7;
+}
+.c-section__ja-heading::before {
+  content: "／";
+  margin-right: 7px;
 }
 .c-section__title {
-  position: relative;
-  font-family: senobi-gothic, sans-serif;
-  font-weight: 700;
-  font-size: 4.8rem;
-  text-align: center;
-  color: #182848;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 100px;
-  padding-top: 150px;
-  margin-top: -100px;
-}
-@media screen and (min-width:480px) {
-  .c-section__title {
-    font-size: 2.8rem;
-  }
-}
-@media screen and (min-width:480px) {
-  .c-section__title {
-    margin-bottom: 38px;
-  }
-}
-.c-section__title::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url(../images/mv/yellow-circle.png);
-  background-size: cover;
-  width: 60px;
-  height: 60px;
-  -webkit-transform: translate(-35%, -35%);
-          transform: translate(-35%, -35%);
-}
-@media screen and (min-width:480px) {
-  .c-section__title::before {
-    width: 30px;
-    height: 30px;
-  }
-}
-.c-section__title::after {
-  content: "";
-  display: block;
-  height: 10px;
-  width: 60px;
-  margin: 36px auto 0;
-  background-color: #b0c4de;
-}
-@media screen and (min-width:480px) {
-  .c-section__title::after {
-    height: 5px;
-  }
-}
-.c-section__lead {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-bottom: 100px;
-}
-.c-section__lead__text {
+  margin-top: 30px;
+  font-family: NotoSansJP;
   font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.625;
+  text-align: left;
+  color: #191919;
+}
+.c-section__desc {
+  margin-top: 20px;
+  font-family: NotoSansJP;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.28px;
+  text-align: left;
+  color: #191919;
 }
 
 .p-mv {
@@ -806,4 +780,12 @@ a:hover img {
   background-color: #b8614b;
   color: #fff;
   font-size: 1.2rem;
+}
+
+.p-services__content {
+  background: linear-gradient(115deg, #f0f0f0 0%, #f0f0f0 60%, white 60%, white 60%, white 90%, #f0f0f0 90%);
+}
+
+.p-services__text-content {
+  margin-top: 40px;
 }
