@@ -1,8 +1,9 @@
 @use "../foundation/variables" as v;
 
 .p-mv {
-	position: relative;
+  position: relative;
   padding-top: 56px;
+	top: -56px;
   // background-color: v.$main-primary;
   background-image: -moz-linear-gradient(
     0deg,
@@ -32,16 +33,15 @@
 
 .p-mv {
   &__heading {
-    font-family: Lato;
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.21;
     letter-spacing: 0.96px;
     text-align: left;
-    color: #fff;
-		text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
+    color: v.$color-white;
+    text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
   }
   &__sub-heading__wrapper {
     margin-top: 18px;
@@ -51,72 +51,63 @@
     background-color: v.$color-white;
     display: inline-block;
     transform: skew(-30deg);
-		filter: drop-shadow(3px 2px 0px #182848);
+    filter: drop-shadow(3px 2px 0px v.$main-primary);
 
-		&:nth-of-type(2){
-			margin-top: 12px;
-		}
+    &:nth-of-type(2) {
+      margin-top: 12px;
+    }
     &__skew-box {
       display: inline-block;
       transform: skew(30deg);
     }
     &__text {
-			padding-left: 22px;
-			padding-right: 27px;
-			color: v.$main-primary;
-      font-family: NotoSansJP;
+      padding-left: 22px;
+      padding-right: 27px;
+      color: v.$main-primary;
       font-size: 1.95rem;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
       line-height: 36px;
-      letter-spacing: normal;
       text-align: left;
-
     }
   }
 }
 
-.p-mv__news-container{
-	width: 92%;
-	position: absolute;
-	bottom: 26px;
+.p-mv__news-container {
+  width: 92%;
+  position: absolute;
+  bottom: 26px;
 }
 
-.p-mv__news-title{
-	display: inline-block;
-	background-color: v.$main-primary;
-	padding: 2px 13px;
-	clip-path: polygon(100% 0, 0 0, 0 80%, 100% 100%);
+.p-mv__news-title {
+  display: inline-block;
+  background-color: v.$main-primary;
+  padding: 2px 13px;
+  clip-path: polygon(100% 0, 0 0, 0 80%, 100% 100%);
 }
 
 .p-mv__headline {
-	background-color: v.$color-white;
+  background-color: v.$color-white;
   height: 48px;
   padding: 14px 2.4%;
-  border: solid 1px #182848;
-	// font
-	// font-family: NotoSansJP;
+  border: solid 1px v.$main-primary;
+  // font
   font-size: 1.4rem;
   text-align: left;
   color: v.$main-primary;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	span{
-		display: inline-block;
-	}
-	&__tag{
-		// width: 65px;
-		// height: 20px;
-		margin: 0 8px 0 6px;
-		padding: 1px 5px;
-		border-radius: 8.1px;
-		background-color: #b8614b;
-		color: v.$color-white;
-		font-size: 1.2rem;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    display: inline-block;
+  }
+  &__tag {
+    // width: 65px;
+    // height: 20px;
+    margin: 0 8px 0 6px;
+    padding: 1px 5px;
+    border-radius: 8.1px;
+    background-color: #b8614b;
+    color: v.$color-white;
+    font-size: 1.2rem;
+  }
 }
-
-
-

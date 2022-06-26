@@ -1,13 +1,13 @@
 @use "../foundation/variables" as v;
 
-.p-works{
-	.c-button{
-		margin-top: 40px;
-	}
+.p-works {
+  .c-button {
+    margin-top: 40px;
+  }
 }
 
 .p-works__article-block {
-	margin-top: 43px;
+  margin-top: 43px;
 }
 
 .p-works__content {
@@ -34,15 +34,15 @@
 .p-works__number {
   width: 64px;
   height: 40px;
-  background-color: #182848;
-  font-family: Lato;
+  background-color: v.$main-primary;
+  // font-family: Lato;
   font-size: 2rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
   letter-spacing: normal;
-  color: #fff;
+  color: v.$color-white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +55,7 @@
     }
   }
   &:last-of-type {
-		margin-top: 40px;
+    margin-top: 40px;
     .p-works__image-ballet {
       background-image: url(../images/Sp-assets/image-works02.jpg);
     }
@@ -65,24 +65,19 @@
 .p-works__item {
   &__heading {
     margin-top: 22px;
-    font-family: NotoSansJP;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1;
     letter-spacing: normal;
-    color: #b8614b;
+    color: v.$accent-primary;
   }
   &__desc {
-		margin-top: 23px;
-    font-family: NotoSansJP;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
+    margin-top: 23px;
+    font-size: 1.4rem;
     line-height: 2;
     letter-spacing: 0.28px;
-    color: #191919;
+    color: v.$color-black;
   }
 }

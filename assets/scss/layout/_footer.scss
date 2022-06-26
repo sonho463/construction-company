@@ -5,7 +5,7 @@
   width: 100%;
   background-color: v.$main-primary;
   padding: 40px 6.4% 0;
-  color: #fff;
+  color: v.$color-white;
 }
 
 .l-footer__logo {
@@ -50,5 +50,4 @@
   line-height: 1;
   letter-spacing: normal;
   text-align: left;
-  color: #fff;
-}
+	color: v.$color-white;}
