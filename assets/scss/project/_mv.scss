@@ -81,8 +81,8 @@
 .p-mv__news-title {
   display: inline-block;
   background-color: v.$main-primary;
-  padding: 2px 13px;
-  clip-path: polygon(100% 0, 0 0, 0 80%, 100% 100%);
+  padding: 2px 25px 2px 13px;
+  clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
 }
 
 .p-mv__headline {
