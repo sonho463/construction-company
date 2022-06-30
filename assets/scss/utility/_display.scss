@@ -1,7 +1,17 @@
+@use "../foundation/variables" as v;
+
+
 .display-none {
   display: none !important;
 }
 
 .display-block {
   display: block !important;
+}
+
+.u-active_pc{
+	display: none;
+	@include v.mq(lg){
+		display: inline;
+	}
 }

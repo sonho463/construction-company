@@ -1,0 +1,40 @@
+@use "../foundation/variables" as v;
+
+.g-nav {
+  display: none;
+  @include v.mq(lg) {
+    display: block;
+  }
+}
+
+.g-nav__list {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+}
+
+.g-nav__item {
+	&:not(:last-of-type){
+		border-right: solid v.$color-white 1px;
+	}
+	transform: skew(-45deg);
+	padding: 0 20px;
+}
+
+.g-nav__item__link {
+	display: inline-block;
+	text-align: center;
+	transform: skew(45deg);
+}
+
+.g-nav__text-ja {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.g-nav__text-en {
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+}

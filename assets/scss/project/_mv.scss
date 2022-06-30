@@ -3,7 +3,11 @@
 .p-mv {
   position: relative;
   padding-top: 56px;
-	top: -56px;
+  top: -56px;
+  @include v.mq(lg) {
+    top: -80px;
+    padding-top: 80px;
+  }
   // background-color: v.$main-primary;
   background-image: -moz-linear-gradient(
     0deg,
@@ -29,60 +33,88 @@
   background-size: cover;
   height: 611px;
   padding: 112px 5.1% 0;
+  @include v.mq(lg) {
+    height: 688px;
+    background-image: url(../images/PC-assets/top-image-1.png);
+    padding: 120px 12.1% 0;
+  }
 }
 
 .p-mv {
   &__heading {
     font-size: 4.8rem;
     font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.21;
     letter-spacing: 0.96px;
     text-align: left;
     color: v.$color-white;
     text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
+    @include v.mq(lg) {
+      font-family: Lato;
+      font-size: 9.6rem;
+      font-weight: 900;
+      line-height: 1.17;
+      letter-spacing: 1.92px;
+      text-align: left;
+      color: #fff;
+    }
   }
   &__sub-heading__wrapper {
     margin-top: 18px;
   }
   &__sub-heading {
-    height: 36px;
     background-color: v.$color-white;
     display: inline-block;
-    transform: skew(-30deg);
+    transform: skew(-45deg);
     filter: drop-shadow(3px 2px 0px v.$main-primary);
+    padding-left: 22px;
+    padding-right: 27px;
+    @include v.mq(lg) {
+      display: inline-block;
+      padding: 5px 22px 5px 28px;
+			margin-left: 31px;
+    }
 
     &:nth-of-type(2) {
       margin-top: 12px;
     }
     &__skew-box {
       display: inline-block;
-      transform: skew(30deg);
+      transform: skew(45deg);
     }
     &__text {
-      padding-left: 22px;
-      padding-right: 27px;
       color: v.$main-primary;
       font-size: 1.95rem;
       font-weight: bold;
-      line-height: 36px;
+      // line-height: 36px;
       text-align: left;
+      @include v.mq(lg) {
+        font-size: 3.2rem;
+      }
     }
   }
 }
 
 .p-mv__news-container {
-  width: 92%;
-  position: absolute;
-  bottom: 26px;
+  width: 100%;
+  margin-top: 132px;
+  @include v.mq(lg) {
+    display: flex;
+  }
 }
 
 .p-mv__news-title {
   display: inline-block;
   background-color: v.$main-primary;
   padding: 2px 25px 2px 13px;
-  clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
+	clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
+	@include v.mq(lg){
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2px 88px 2px 41px;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
+	}
 }
 
 .p-mv__headline {
@@ -97,6 +129,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+	@include v.mq(lg){
+		margin-left: -55px;
+		flex:1;
+		justify-content: flex-start;
+		padding-left: 60px;
+	}
   span {
     display: inline-block;
   }
@@ -109,5 +147,8 @@
     background-color: #b8614b;
     color: v.$color-white;
     font-size: 1.2rem;
+		@include v.mq(lg){
+			margin: 0 24px;
+		}
   }
 }

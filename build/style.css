@@ -451,6 +451,7 @@ template {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid pink;
 }
 
 html {
@@ -521,6 +522,16 @@ a:hover img {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
+@media screen and (min-width:1024px) {
+  .l-header {
+    padding: 15px 2.9%;
+  }
+}
+@media screen and (min-width:1024px) {
+  .l-header {
+    height: 80px;
+  }
+}
 
 .fixed {
   position: fixed;
@@ -528,6 +539,11 @@ a:hover img {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #fff;
+}
+@media screen and (min-width:1024px) {
+  .fixed {
+    top: -80px;
+  }
 }
 
 .appear {
@@ -547,29 +563,17 @@ a:hover img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-items: center;
 }
 .l-header__logo {
-  width: 32%;
-  height: 26px;
+  height: 29px;
+  width: 136px;
 }
 .l-header__logo-img--b {
   display: none;
-}
-
-.g-nav {
-  display: none;
-}
-
-.g-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .hamburger {
@@ -587,6 +591,11 @@ a:hover img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 22px;
+}
+@media screen and (min-width:1024px) {
+  .hamburger {
+    display: none;
+  }
 }
 .hamburger__line {
   display: block;
@@ -742,12 +751,64 @@ a:hover img {
   color: #fff;
 }
 
+.g-nav {
+  display: none;
+}
+@media screen and (min-width:1024px) {
+  .g-nav {
+    display: block;
+  }
+}
+
+.g-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.g-nav__item {
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  padding: 0 20px;
+}
+.g-nav__item:not(:last-of-type) {
+  border-right: solid #fff 1px;
+}
+
+.g-nav__item__link {
+  display: inline-block;
+  text-align: center;
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
+}
+
+.g-nav__text-ja {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.g-nav__text-en {
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+}
+
 .p-mv {
   position: relative;
   padding-top: 56px;
   top: -56px;
   background-image: -ms-linear-gradient(0deg, rgb(75, 108, 183) 0%, rgb(24, 40, 72) 100%);
   color: #fff;
+}
+@media screen and (min-width:1024px) {
+  .p-mv {
+    top: -80px;
+    padding-top: 80px;
+  }
 }
 
 .p-mv__bg {
@@ -756,52 +817,84 @@ a:hover img {
   height: 611px;
   padding: 112px 5.1% 0;
 }
+@media screen and (min-width:1024px) {
+  .p-mv__bg {
+    height: 688px;
+    background-image: url(../images/PC-assets/top-image-1.png);
+    padding: 120px 12.1% 0;
+  }
+}
 
 .p-mv__heading {
   font-size: 4.8rem;
   font-weight: 900;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.21;
   letter-spacing: 0.96px;
   text-align: left;
   color: #fff;
   text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
 }
+@media screen and (min-width:1024px) {
+  .p-mv__heading {
+    font-family: Lato;
+    font-size: 9.6rem;
+    font-weight: 900;
+    line-height: 1.17;
+    letter-spacing: 1.92px;
+    text-align: left;
+    color: #fff;
+  }
+}
 .p-mv__sub-heading__wrapper {
   margin-top: 18px;
 }
 .p-mv__sub-heading {
-  height: 36px;
   background-color: #fff;
   display: inline-block;
-  -webkit-transform: skew(-30deg);
-          transform: skew(-30deg);
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
   -webkit-filter: drop-shadow(3px 2px 0px #182848);
           filter: drop-shadow(3px 2px 0px #182848);
+  padding-left: 22px;
+  padding-right: 27px;
+}
+@media screen and (min-width:1024px) {
+  .p-mv__sub-heading {
+    display: inline-block;
+    padding: 5px 22px 5px 28px;
+    margin-left: 31px;
+  }
 }
 .p-mv__sub-heading:nth-of-type(2) {
   margin-top: 12px;
 }
 .p-mv__sub-heading__skew-box {
   display: inline-block;
-  -webkit-transform: skew(30deg);
-          transform: skew(30deg);
+  -webkit-transform: skew(45deg);
+          transform: skew(45deg);
 }
 .p-mv__sub-heading__text {
-  padding-left: 22px;
-  padding-right: 27px;
   color: #182848;
   font-size: 1.95rem;
   font-weight: bold;
-  line-height: 36px;
   text-align: left;
+}
+@media screen and (min-width:1024px) {
+  .p-mv__sub-heading__text {
+    font-size: 3.2rem;
+  }
 }
 
 .p-mv__news-container {
-  width: 92%;
-  position: absolute;
-  bottom: 26px;
+  width: 100%;
+  margin-top: 132px;
+}
+@media screen and (min-width:1024px) {
+  .p-mv__news-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .p-mv__news-title {
@@ -810,6 +903,22 @@ a:hover img {
   padding: 2px 25px 2px 13px;
   -webkit-clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
           clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
+}
+@media screen and (min-width:1024px) {
+  .p-mv__news-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2px 88px 2px 41px;
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
+            clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
+  }
 }
 
 .p-mv__headline {
@@ -830,6 +939,18 @@ a:hover img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (min-width:1024px) {
+  .p-mv__headline {
+    margin-left: -55px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 60px;
+  }
+}
 .p-mv__headline span {
   display: inline-block;
 }
@@ -840,6 +961,11 @@ a:hover img {
   background-color: #b8614b;
   color: #fff;
   font-size: 1.2rem;
+}
+@media screen and (min-width:1024px) {
+  .p-mv__headline__tag {
+    margin: 0 24px;
+  }
 }
 
 .p-services {
@@ -1039,4 +1165,13 @@ a:hover img {
 
 .display-block {
   display: block !important;
+}
+
+.u-active_pc {
+  display: none;
+}
+@media screen and (min-width:1024px) {
+  .u-active_pc {
+    display: inline;
+  }
 }
