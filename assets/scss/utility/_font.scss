@@ -1,0 +1,5 @@
+@use "../foundation/variables" as v;
+
+.js-color-black{
+	color: v.$color-black !important;
+}

@@ -3,16 +3,42 @@ const header = document.querySelector(".js-header");
 const headerLogo = document.querySelector(".js-header__logo");
 const headerLogoBlack = document.querySelector(".js-header__logo--b");
 const hamburgerLines = document.querySelectorAll(".hamburger__line");
+const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
+const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
+const gNavText = [gNavTextEn, gNavTextJa];
+
+const addClassAction = () => {
+  header.classList.add("fixed");
+  headerLogo.classList.add("display-none");
+  headerLogoBlack.classList.add("display-block");
+  hamburgerLines.forEach((line) => {
+    line.classList.add("hamburger__line--black");
+  });
+  gNavText.forEach((ele) => {
+    ele.forEach((ele) => {
+      ele.classList.add("js-color-black");
+    });
+  });
+};
+
+const removeClassAction = () => {
+  gNavText.forEach((ele) => {
+    header.classList.remove("fixed");
+    headerLogo.classList.remove("display-none");
+    headerLogoBlack.classList.remove("display-block");
+    hamburgerLines.forEach((line) => {
+      line.classList.remove("hamburger__line--black");
+    });
+    ele.forEach((ele) => {
+      ele.classList.remove("js-color-black");
+    });
+  });
+};
 
 window.addEventListener("scroll", () => {
   const offsetY = window.scrollY;
   if (offsetY > 120) {
-    header.classList.add("fixed");
-    headerLogo.classList.add("display-none");
-    headerLogoBlack.classList.add("display-block");
-    hamburgerLines.forEach((line) => {
-      line.classList.add("hamburger__line--black");
-    });
+    addClassAction();
   }
   if (offsetY > 400) {
     header.classList.add("appear");
@@ -21,11 +47,6 @@ window.addEventListener("scroll", () => {
     header.classList.remove("appear");
   }
   if (offsetY < 70) {
-    header.classList.remove("fixed");
-    headerLogo.classList.remove("display-none");
-    headerLogoBlack.classList.remove("display-block");
-    hamburgerLines.forEach((line) => {
-      line.classList.remove("hamburger__line--black");
-    });
+    removeClassAction();
   }
 });

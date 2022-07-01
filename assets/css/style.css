@@ -790,21 +790,11 @@ a:hover img {
   line-height: 1;
   color: #fff;
 }
-@media screen and (min-width:1024px) {
-  .g-nav__text-ja {
-    color: #191919;
-  }
-}
 
 .g-nav__text-en {
   font-size: 1rem;
   line-height: 1;
   color: #fff;
-}
-@media screen and (min-width:1024px) {
-  .g-nav__text-en {
-    color: #191919;
-  }
 }
 
 .p-mv {
@@ -1189,6 +1179,10 @@ a:hover img {
   .u-active_pc {
     display: inline;
   }
+}
+
+.js-color-black {
+  color: #191919 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
