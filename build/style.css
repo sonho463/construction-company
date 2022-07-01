@@ -505,6 +505,14 @@ a:hover img {
   z-index: 5;
 }
 
+.p-mv__news-title {
+  z-index: 2;
+}
+
+.p-mv__headline {
+  z-index: 1;
+}
+
 .l-header {
   position: sticky;
   width: 100%;
@@ -680,9 +688,17 @@ a:hover img {
 }
 .c-section__en-heading {
   font-family: Lato;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: bold;
   color: #191919;
+}
+@media screen and (min-width:1024px) {
+  .c-section__en-heading {
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+  }
 }
 .c-section__ja-heading {
   margin-left: 7px;
@@ -695,13 +711,28 @@ a:hover img {
   content: "／";
   margin-right: 7px;
 }
+@media screen and (min-width:1024px) {
+  .c-section__ja-heading {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: left;
+  }
+}
 .c-section__title {
   margin-top: 30px;
-  font-family: NotoSansJP;
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1.625;
   color: #191919;
+}
+@media screen and (min-width:1024px) {
+  .c-section__title {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.46;
+    text-align: left;
+  }
 }
 .c-section__desc {
   margin-top: 20px;
@@ -710,6 +741,13 @@ a:hover img {
   line-height: 2;
   letter-spacing: 0.28px;
   color: #191919;
+}
+@media screen and (min-width:1024px) {
+  .c-section__desc {
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.32px;
+  }
 }
 
 .c-button {
@@ -731,6 +769,12 @@ a:hover img {
   -webkit-filter: drop-shadow(2px 2px 2px rgba(24, 40, 72, 0.5));
           filter: drop-shadow(2px 2px 2px rgba(24, 40, 72, 0.5));
 }
+@media screen and (min-width:1024px) {
+  .c-button {
+    width: 256px;
+    height: 64px;
+  }
+}
 .c-button::after {
   content: "";
   background-image: url(../images/arrow.png);
@@ -742,13 +786,20 @@ a:hover img {
   margin: 0 18px 0 0;
   font-family: NotoSansJP;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
-  letter-spacing: normal;
   text-align: left;
   color: #fff;
+}
+@media screen and (min-width:1024px) {
+  .c-button__text {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c-button--pc-align-left {
+    margin-left: unset;
+  }
 }
 
 .g-nav {
@@ -790,11 +841,21 @@ a:hover img {
   line-height: 1;
   color: #fff;
 }
+@media screen and (min-width:1024px) {
+  .g-nav__text-ja {
+    color: #191919;
+  }
+}
 
 .g-nav__text-en {
   font-size: 1rem;
   line-height: 1;
   color: #fff;
+}
+@media screen and (min-width:1024px) {
+  .g-nav__text-en {
+    color: #191919;
+  }
 }
 
 .p-mv {
@@ -916,12 +977,13 @@ a:hover img {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 2px 88px 2px 41px;
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
-            clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
+    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
+            clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
   }
 }
 
 .p-mv__headline {
+  position: relative;
   background-color: #fff;
   height: 48px;
   padding: 14px 2.4%;
@@ -951,6 +1013,22 @@ a:hover img {
     padding-left: 60px;
   }
 }
+.p-mv__headline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 120px;
+  height: 100%;
+  color: #fff;
+  background-color: #182848;
+  -webkit-clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
+          clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
+  background-image: url(../images/arrow.png);
+  background-size: 16px 4px;
+  background-repeat: no-repeat;
+  background-position: 72px center;
+}
 .p-mv__headline span {
   display: inline-block;
 }
@@ -976,12 +1054,41 @@ a:hover img {
 }
 
 .p-services__content {
-  padding-bottom: 26px;
+  position: relative;
+  padding-bottom: 60px;
   background: linear-gradient(115deg, #f0f0f0 0%, #f0f0f0 60%, white 60%, white 60%, white 90%, #f0f0f0 90%);
+}
+@media screen and (min-width:1024px) {
+  .p-services__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .p-services__image {
+    position: absolute;
+    left: 0;
+    margin-top: 40px;
+  }
 }
 
 .p-services__text-content {
   margin-top: 40px;
+}
+@media screen and (min-width:1024px) {
+  .p-services__text-content {
+    padding-left: 50%;
+    margin-right: unset;
+    margin-left: unset;
+  }
+}
+
+.p-services .c-button {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
 }
 
 .p-about {

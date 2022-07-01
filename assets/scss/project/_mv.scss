@@ -113,11 +113,12 @@
 		align-items: center;
 		justify-content: center;
 		padding: 2px 88px 2px 41px;
-		clip-path: polygon(100% 0, 0 0, 0 100%, 70% 100%);
+		clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
 	}
 }
 
 .p-mv__headline {
+	position: relative;
   background-color: v.$color-white;
   height: 48px;
   padding: 14px 2.4%;
@@ -134,6 +135,21 @@
 		flex:1;
 		justify-content: flex-start;
 		padding-left: 60px;
+	}
+	&::after{
+		content: '';
+		position:absolute;
+		right: 0;
+		display: block;
+		width: 120px;
+		height: 100%;
+		color: v.$color-white;
+		background-color: v.$main-primary;
+		clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
+		background-image: url(../images/arrow.png);
+		background-size: 16px 4px;
+		background-repeat: no-repeat;
+		background-position: 72px center;
 	}
   span {
     display: inline-block;

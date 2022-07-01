@@ -23,7 +23,8 @@
 		<div class="l-header__inner">
 			<h1 class="l-header__logo">
 				<img src="./assets/images/logos-sonozakigumi/logo-w.svg" alt="" class="l-header__logo-img js-header__logo">
-				<img src="./assets/images/logos-sonozakigumi/logo-b.svg" alt="" class="l-header__logo-img l-header__logo-img--b js-header__logo--b">
+				<img src="./assets/images/logos-sonozakigumi/logo-b.svg" alt=""
+					class="l-header__logo-img l-header__logo-img--b js-header__logo--b">
 			</h1>
 			<nav class="g-nav">
 				<ul class="g-nav__list">
@@ -103,11 +104,11 @@
 							NEWS
 						</span>
 					</div>
-					<div class="p-mv__headline">
+					<a href="#" class="p-mv__headline">
 						<span class="p-mv__headline__date">2021.06.12 </span>
 						<span class="p-mv__headline__tag">お知らせ</span>
 						<span class="p-mv__headline__excerpt">新サイトを公開しました。</span>
-					</div>
+					</a>
 				</div>
 			</div>
 
@@ -116,7 +117,10 @@
 		<section class="p-services">
 			<div class="p-services__content">
 				<figure class="p-services__image">
-					<img src="./assets/images/SP-assets/image-services.jpg" alt="">
+					<picture>
+						<source media="(min-width: 1024px)" srcset="./assets/images/PC-assets/image-services.jpg">
+						<img src="./assets/images/SP-assets/image-services.jpg" alt="園崎組サービスのイメージ画像">
+					</picture>
 				</figure>
 				<div class="p-services__text-content c-inner">
 					<div class="c-section__heading-block">
@@ -128,10 +132,11 @@
 						世界最高峰の技術で支える
 					</h3>
 					<p class="c-section__desc">
+						<!-- プロフェクト→プロジェクト修正 -->
 						私達のモットーは、
-						「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロフェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。
+						「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロジェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。
 					</p>
-					<a href="" class="c-button">
+					<a href="" class="c-button c-button--pc-align-left">
 						<span class="c-button__text">
 							事業内容を更に知る
 						</span>
@@ -148,6 +153,7 @@
 					<div class="p-about__text-content">
 						<div class="c-section__heading-block">
 							<h2 class="c-section__en-heading">ABOUT</h2>
+							<!-- ABOU→ABOUT修正 -->
 							<p class="c-section__ja-heading">園崎組について</p>
 						</div>
 						<p class="c-section__desc">

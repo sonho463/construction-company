@@ -30,11 +30,17 @@
 .g-nav__text-ja {
   font-size: 1.6rem;
   line-height: 1;
-  color: #fff;
+	color: v.$color-white;
+	@include v.mq(lg){
+		color: v.$color-black;
+	}
 }
 
 .g-nav__text-en {
-  font-size: 1rem;
+	font-size: 1rem;
   line-height: 1;
-  color: #fff;
+  color: v.$color-white;
+	@include v.mq(lg){
+		color: v.$color-black;
+	}
 }

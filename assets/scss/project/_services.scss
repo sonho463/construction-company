@@ -2,13 +2,14 @@
 
 .p-services {
   margin-top: 120px;
-	.c-button{
-		margin-top: 36px;
-	}
+  .c-button {
+    margin-top: 36px;
+  }
 }
 
 .p-services__content {
-	padding-bottom: 26px;
+	position: relative;
+  padding-bottom: 60px;
   background: linear-gradient(
     115deg,
     #f0f0f0 0%,
@@ -18,8 +19,33 @@
     white 90%,
     #f0f0f0 90%
   );
+  @include v.mq(lg) {
+    display: flex;
+  }
+}
+
+.p-services__image{
+	@include v.mq(lg){
+		// flex:1;
+		position: absolute;
+		left: 0;
+		// flex-basis: 47%;
+		margin-top: 40px;
+	}
 }
 
 .p-services__text-content {
-  margin-top: 40px;
+	margin-top: 40px;
+	@include v.mq(lg){
+		padding-left: 50%;
+		// flex: 1;
+		// flex-basis: 40%;
+		margin-right: unset;
+		margin-left: unset;
+	}
+}
+
+.p-services .c-button{
+	position: absolute;
+	bottom: -32px;left: 50%;
 }
