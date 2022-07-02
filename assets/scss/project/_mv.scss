@@ -135,21 +135,21 @@
 		flex:1;
 		justify-content: flex-start;
 		padding-left: 60px;
-	}
-	&::after{
-		content: '';
-		position:absolute;
-		right: 0;
-		display: block;
-		width: 120px;
-		height: 100%;
-		color: v.$color-white;
-		background-color: v.$main-primary;
-		clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
-		background-image: url(../images/arrow.png);
-		background-size: 16px 4px;
-		background-repeat: no-repeat;
-		background-position: 72px center;
+		&::after{
+			content: '';
+			position:absolute;
+			right: 0;
+			display: block;
+			width: 120px;
+			height: 100%;
+			color: v.$color-white;
+			background-color: v.$main-primary;
+			clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
+			background-image: url(../images/arrow.png);
+			background-size: 16px 4px;
+			background-repeat: no-repeat;
+			background-position: 72px center;
+		}
 	}
   span {
     display: inline-block;

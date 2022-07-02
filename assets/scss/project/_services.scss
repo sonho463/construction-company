@@ -45,7 +45,9 @@
 	}
 }
 
-.p-services .c-button{
-	position: absolute;
-	bottom: -32px;left: 50%;
+@include v.mq(lg){
+	.p-services .c-button{
+		position: absolute;
+		bottom: -32px;left: 50%;
+	}
 }

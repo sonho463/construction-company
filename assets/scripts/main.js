@@ -7,6 +7,7 @@ const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
 const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
 const gNavText = [gNavTextEn, gNavTextJa];
 
+// ヘッダーが現れるときのアクション
 const addClassAction = () => {
   header.classList.add("fixed");
   headerLogo.classList.add("display-none");
@@ -21,6 +22,7 @@ const addClassAction = () => {
   });
 };
 
+// ヘッダーが消えるときのアクション
 const removeClassAction = () => {
   gNavText.forEach((ele) => {
     header.classList.remove("fixed");
