@@ -3,9 +3,9 @@
 .p-recruit {
   margin-top: 124px;
   @include v.mq(lg) {
-		background-color: #f0f0f0;
-		padding-top: 81px;
-		padding-bottom: 80px;
+    background-color: #f0f0f0;
+    padding-top: 81px;
+    padding-bottom: 80px;
     .c-section__heading-block {
       justify-content: center;
     }
@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     gap: 2.8%;
-		margin-top: 54px;
+    margin-top: 54px;
   }
 }
 
@@ -58,9 +58,11 @@
       background-image: url(../images/PC-assets/image-recruit-3.jpg);
     }
   }
+
   &__heading {
+    width: 100%;
     margin: 0 10px 0 0;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1;
     text-align: left;
     color: v.$color-white;
@@ -69,8 +71,20 @@
       height: 56px;
       line-height: 56px;
       padding-left: 16px;
+      padding-right: 16px;
       transform: translateX(18%);
       background-color: rgba(24, 40, 72, 0.64);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+      &::after {
+        content: "";
+        display: block;
+        background-image: url(../images/arrow.png);
+				background-size: cover;
+        width: 16px;
+        height: 5px;
+      }
     }
   }
 }
