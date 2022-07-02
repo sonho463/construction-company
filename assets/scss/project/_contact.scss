@@ -6,7 +6,20 @@
   padding-bottom: 96px;
   background-image: url(../images/SP-assets/background-image-contact.jpg);
   background-size: cover;
+	@include v.mq(lg){
+		margin-top: 0;
+		padding-bottom: 80px;
+		background-image: url(../images/PC-assets/background-image-contact.jpg);
+		.c-section__heading-block{
+			justify-content: center;
+		}
+		.c-section__desc{
+			text-align: center;
+		}
+	}
 }
+
+
 
 .p-contact {
   .c-section__en-heading,
@@ -24,6 +37,13 @@
   margin: 32px 0 24px;
   padding: 18px 24px 15px;
   box-shadow: 0px 2px 4px 0 rgba(25, 25, 25, 0.46);
+	@include v.mq(lg){
+		height: 72px;
+		margin-top: 55px;
+		margin-bottom: 0;
+		justify-content: center;
+		gap: 16px;
+	}
   &::before {
     content: "";
     background-size: contain;
@@ -38,7 +58,18 @@
   }
 }
 
+@include v.mq(lg){
+	.p-contact__list{
+		display: flex;
+		justify-content: center;
+		gap: 5.9%;
+	}
+}
+
 .p-contact__item {
+	@include v.mq(lg){
+		width: 23.4%;
+	}
   &:first-of-type {
     .p-contact__link {
       background-color: #b8614b;

@@ -1,36 +1,76 @@
 @use "../foundation/variables" as v;
 
-.p-recruit{
-	margin-top: 124px;
-	.c-button{
-		margin-top: 40px;
-	}
+.p-recruit {
+  margin-top: 124px;
+  @include v.mq(lg) {
+		background-color: #f0f0f0;
+		padding-top: 81px;
+		padding-bottom: 80px;
+    .c-section__heading-block {
+      justify-content: center;
+    }
+  }
+  .c-button {
+    margin-top: 40px;
+    @include v.mq(lg) {
+      margin-top: 80px;
+    }
+  }
 }
 
-.p-recruit__menu-list{
-	margin-top: 15px;
+.p-recruit__menu-list {
+  margin-top: 15px;
+  @include v.mq(lg) {
+    display: flex;
+    justify-content: center;
+    gap: 2.8%;
+		margin-top: 54px;
+  }
 }
 
-.p-recruit__item{
-	&__bg{
-		display: block;
-		background-size: cover;
-		height: 200px;
-		padding: 168px 0 16px 21px;
-	}
-	&:first-of-type{
-		background-image: url(../images/SP-assets/image-recruit-1.jpg);
-	}
-	&:nth-of-type(2){
-		background-image: url(../images/SP-assets/image-recruit-2.jpg);
-	}
-	&:nth-of-type(3){
-		background-image: url(../images/SP-assets/image-recruit-3.jpg);
-	}
-	&__heading{
-			margin: 0 10px 0 0;
-			font-size: 16px;
-			line-height: 1;
-			text-align: left;
-			color: v.$color-white;	}
+.p-recruit__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  padding: 168px 0 16px 21px;
+  @include v.mq(lg) {
+    width: 22.8%;
+  }
+  &:first-of-type {
+    background-image: url(../images/SP-assets/image-recruit-1.jpg);
+    @include v.mq(lg) {
+      background-image: url(../images/PC-assets/image-recruit-1.jpg);
+      margin-top: 80px;
+      // transform: translateY(80px);
+    }
+  }
+  &:nth-of-type(2) {
+    background-image: url(../images/SP-assets/image-recruit-2.jpg);
+    @include v.mq(lg) {
+      background-image: url(../images/PC-assets/image-recruit-2.jpg);
+      // transform: translateY(40px);
+      margin-top: 40px;
+    }
+  }
+  &:nth-of-type(3) {
+    background-image: url(../images/SP-assets/image-recruit-3.jpg);
+    @include v.mq(lg) {
+      background-image: url(../images/PC-assets/image-recruit-3.jpg);
+    }
+  }
+  &__heading {
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    line-height: 1;
+    text-align: left;
+    color: v.$color-white;
+    @include v.mq(lg) {
+      width: 88%;
+      height: 56px;
+      line-height: 56px;
+      padding-left: 16px;
+      transform: translateX(18%);
+      background-color: rgba(24, 40, 72, 0.64);
+    }
+  }
 }

@@ -22,26 +22,67 @@
     white 90%,
     #f0f0f0 90%
   );
+	@include v.mq(lg){
+		padding-bottom: 0;
+		background: linear-gradient(
+			50deg,
+			#f0f0f0 0%,
+			#f0f0f0 18%,
+			white 18%,
+			white 18%,
+			white 82%,
+			#f0f0f0 82%
+		);
+	}
 }
+
+//タイトルブロックPCスタイル画面では中央よせ
+@include v.mq(lg) {
+  .p-works {
+    .c-section__heading-block {
+      justify-content: center;
+    }
+    .c-section__title,
+    .c-section__desc {
+      text-align: center;
+    }
+  }
+}
+
+// list-item PCでは横並び　影付き
+@include v.mq(lg) {
+  .p-works__list {
+    display: flex;
+    justify-content: center;
+    gap: 2.9%;
+  }
+}
+
+
 
 .p-works__image-ballet {
   height: 160px;
   display: flex;
   align-items: flex-end;
   background-size: cover;
+	@include v.mq(lg){
+		height: 240px;
+		align-items: flex-start;
+	}
 }
 
 .p-works__number {
   width: 64px;
   height: 40px;
+	@include v.mq(lg){
+		width: 56px;height: 56px;
+		transform: translate(-30%, -30%);
+	}
   background-color: v.$main-primary;
   // font-family: Lato;
   font-size: 2rem;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1;
-  letter-spacing: normal;
   color: v.$color-white;
   display: flex;
   align-items: center;
@@ -49,15 +90,30 @@
 }
 
 .p-works__item {
+  @include v.mq(lg) {
+    width: 34.6%;
+		padding-bottom: 36px;
+		box-shadow: 0px 0px 10px 0px rgba(25, 25, 25, 0.25);
+		background-color: v.$color-white;
+  }
   &:first-of-type {
     .p-works__image-ballet {
       background-image: url(../images/Sp-assets/image-works01.jpg);
+      @include v.mq(lg) {
+        background-image: url(../images/PC-assets/image-works-1.jpg);
+      }
     }
   }
   &:last-of-type {
     margin-top: 40px;
+    @include v.mq(lg) {
+      margin-top: 0;
+    }
     .p-works__image-ballet {
       background-image: url(../images/Sp-assets/image-works02.jpg);
+      @include v.mq(lg) {
+        background-image: url(../images/PC-assets/image-works-2.jpg);
+      }
     }
   }
 }

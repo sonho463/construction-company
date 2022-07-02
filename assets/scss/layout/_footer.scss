@@ -6,27 +6,43 @@
   background-color: v.$main-primary;
   padding: 40px 6.4% 0;
   color: v.$color-white;
+	@include v.mq(lg){
+		padding: 40px 12.4% 0;
+
+	}
 }
 
 .l-footer__logo {
   margin-top: 81px;
   width: 42.4%;
+	@include v.mq(lg){
+		margin-top: 0;
+	}
+}
+
+@include v.mq(lg){
+	.l-footer__menu__outer{
+		font-size: 1.6rem;
+		position: absolute;
+		top: 50%;
+		right: 12.4%;
+		transform: translateY(-50%);
+		writing-mode: vertical-lr;
+		letter-spacing: .05em;
+	}
 }
 
 .l-footer__menu:nth-of-type(2) {
   margin-top: 50px;
+	@include v.mq(lg){
+		margin-top: 0;
+	}
 }
 
-.l-footer {
-  &__item__text {
-    font-family: NotoSansJP;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 2.5;
-    letter-spacing: normal;
-  }
+.l-footer__item__text {
+  font-family: NotoSansJP;
+  font-size: 14px;
+  line-height: 2.5;
 }
 
 .l-footer__name {
@@ -50,4 +66,11 @@
   line-height: 1;
   letter-spacing: normal;
   text-align: left;
-	color: v.$color-white;}
+  color: v.$color-white;
+}
+
+@include v.mq(lg){
+	.l-footer__info{
+		line-height: 2;
+	}
+}
