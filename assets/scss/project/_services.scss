@@ -3,21 +3,21 @@
 .p-services {
   margin-top: 120px;
   .c-button {
-    margin-top: 36px;
+    margin-top: 28px;
   }
 }
 
 .p-services__content {
 	position: relative;
-  padding-bottom: 60px;
+  padding-bottom: 48px;
   background: linear-gradient(
     115deg,
     #f0f0f0 0%,
-    #f0f0f0 60%,
-    white 60%,
-    white 60%,
-    white 90%,
-    #f0f0f0 90%
+    #f0f0f0 59%,
+    white 59%,
+    white 59%,
+    white 91%,
+    #f0f0f0 91%
   );
   @include v.mq(lg) {
     display: flex;
@@ -33,11 +33,17 @@
 }
 
 .p-services__text-content {
-	margin-top: 40px;
+	margin-top: 26px;
 	@include v.mq(lg){
 		padding-left: 50%;
 		margin-right: unset;
 		margin-left: unset;
+	}
+	.c-section__title{
+		margin-top: 10px;
+	}
+	.c-section__desc{
+		margin-top: 15px;
 	}
 }
 

@@ -32,7 +32,7 @@
   background-image: url(../images/SP-assets/top-image-1.png);
   background-size: cover;
   height: 611px;
-  padding: 112px 5.1% 0;
+  padding: 100px 5.1% 0;
   @include v.mq(lg) {
     height: 688px;
     background-image: url(../images/PC-assets/top-image-1.png);
@@ -45,7 +45,7 @@
     font-size: 4.8rem;
     font-weight: 900;
     line-height: 1.21;
-    letter-spacing: 0.96px;
+    letter-spacing: 2.05px;
     text-align: left;
     color: v.$color-white;
     text-shadow: 4.243px 4.243px 4px rgba(24, 40, 72, 0.5);
@@ -60,15 +60,19 @@
     }
   }
   &__sub-heading__wrapper {
-    margin-top: 18px;
+    margin-top: 22px;
   }
   &__sub-heading {
-    background-color: v.$color-white;
     display: inline-block;
-    transform: skew(-45deg);
+    display: flex;
+		align-items: center;
+		width: fit-content;
+		height: 36px;
+    background-color: v.$color-white;
+    transform: skew(-28deg) translateX(10px);
     filter: drop-shadow(3px 2px 0px v.$main-primary);
-    padding-left: 22px;
-    padding-right: 27px;
+    padding-left: 14px;
+    padding-right: 16px;
     @include v.mq(lg) {
       display: inline-block;
       padding: 5px 22px 5px 28px;
@@ -80,12 +84,13 @@
     }
     &__skew-box {
       display: inline-block;
-      transform: skew(45deg);
+      transform: skew(28deg);
     }
     &__text {
       color: v.$main-primary;
       font-size: 1.95rem;
       font-weight: bold;
+			letter-spacing: 0.025em;
       // line-height: 36px;
       text-align: left;
       @include v.mq(lg) {
@@ -97,20 +102,29 @@
 
 .p-mv__news-container {
   width: 100%;
-  margin-top: 132px;
+  margin-top: 135px;
   @include v.mq(lg) {
     display: flex;
   }
 }
 
 .p-mv__news-title {
-  display: inline-block;
+	display: flex;
+	align-items: center;
+	width: fit-content;
   background-color: v.$main-primary;
-  padding: 2px 25px 2px 13px;
-	clip-path: polygon(80% 0, 0 0, 0 100%, 100% 100%);
+	height: 22px;
+  // padding: 2px 25px 2px 13px;
+	padding-left: 12px;
+	padding-right: 22px;
+	clip-path: polygon(85% 0, 0 0, 0 100%, 100% 100%);
+	&__text{
+		margin-top: -2px;
+		font-size: 1.4rem;
+	}
 	@include v.mq(lg){
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
 		justify-content: center;
 		padding: 2px 88px 2px 41px;
 		clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
@@ -154,6 +168,9 @@
   span {
     display: inline-block;
   }
+	&__date{
+		letter-spacing: -0.01em;
+	}
   &__tag {
     // width: 65px;
     // height: 20px;

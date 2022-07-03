@@ -2,7 +2,7 @@
 
 .c-button {
   display: inline-block;
-  width: 68.3%;
+  width: 76.5%;
 	@include v.mq(lg){
 		width: 256px;
 		height: 64px;
@@ -39,5 +39,3 @@
 		margin-left: unset;
 	}
 }
-
-

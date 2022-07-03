@@ -1,7 +1,7 @@
 @use "../foundation/variables" as v;
 
 .p-recruit {
-  margin-top: 124px;
+  margin-top: 104px;
   @include v.mq(lg) {
     background-color: #f0f0f0;
     padding-top: 81px;
@@ -11,15 +11,19 @@
     }
   }
   .c-button {
-    margin-top: 40px;
+    margin-top: 42px;
+		width: 68%;
     @include v.mq(lg) {
       margin-top: 80px;
     }
   }
+	.c-button__text{
+		margin-right: 8px;
+	}
 }
 
 .p-recruit__menu-list {
-  margin-top: 15px;
+  margin-top: 20px;
   @include v.mq(lg) {
     display: flex;
     justify-content: center;

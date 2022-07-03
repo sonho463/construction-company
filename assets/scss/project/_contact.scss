@@ -1,9 +1,9 @@
 @use "../foundation/variables" as v;
 
 .p-contact {
-  margin-top: 120px;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  margin-top: 118px;
+  padding-top: 82px;
+  padding-bottom: 70px;
   background-image: url(../images/SP-assets/background-image-contact.jpg);
   background-size: cover;
 	@include v.mq(lg){
@@ -19,6 +19,13 @@
 	}
 }
 
+.p-contact__content{
+	.c-section__desc{
+		margin-top: 12px;
+		font-size: 1.6rem;
+		letter-spacing: 0;
+	}
+}
 
 
 .p-contact {
@@ -34,9 +41,10 @@
   align-items: center;
   justify-content: space-between;
   height: 48px;
-  margin: 32px 0 24px;
-  padding: 18px 24px 15px;
+  margin: 25px 0 24px;
+	padding: 0 7.2%;
   box-shadow: 0px 2px 4px 0 rgba(25, 25, 25, 0.46);
+	font-size: 1.4rem;
 	@include v.mq(lg){
 		height: 72px;
 		margin-top: 55px;

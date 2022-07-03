@@ -8,8 +8,21 @@
 		margin-top: calc(50px + 160px);
 	}
   .c-button {
-    margin-top: 34px;
+    margin-top: 27px;
   }
+	.c-button__text{
+		margin-right: 27px;
+		letter-spacing: -.15em;
+	}
+}
+
+.p-about__text-content{
+	.c-section__heading-block{
+		margin-top: 26px;
+	}
+	.c-section__desc{
+		margin-top: 11px;
+	}
 }
 
 @include v.mq(lg) {

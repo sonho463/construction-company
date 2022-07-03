@@ -2,12 +2,16 @@
 
 .p-works {
   .c-button {
-    margin-top: 40px;
+    margin-top: 33px;
+		width: 68.5%;
   }
+	.c-button__text{
+		margin-right: 8px;
+	}
 }
 
 .p-works__article-block {
-  margin-top: 43px;
+  margin-top: 34px;
 }
 
 .p-works__content {
@@ -16,11 +20,11 @@
   background: linear-gradient(
     115deg,
     #f0f0f0 0%,
-    #f0f0f0 10%,
-    white 10%,
-    white 10%,
-    white 90%,
-    #f0f0f0 90%
+    #f0f0f0 12%,
+    white 12%,
+    white 12%,
+    white 88%,
+    #f0f0f0 88%
   );
 	@include v.mq(lg){
 		padding-bottom: 0;
@@ -33,6 +37,15 @@
 			white 82%,
 			#f0f0f0 82%
 		);
+	}
+}
+
+.p-works__text-content{
+	.c-section__title{
+		margin-top: 12px;
+	}
+	.c-section__desc{
+		margin-top: 12px;
 	}
 }
 
@@ -105,7 +118,7 @@
     }
   }
   &:last-of-type {
-    margin-top: 40px;
+    margin-top: 30px;
     @include v.mq(lg) {
       margin-top: 0;
     }
@@ -120,7 +133,7 @@
 
 .p-works__item {
   &__heading {
-    margin-top: 22px;
+    margin-top: 23px;
     font-size: 2rem;
     font-weight: 500;
     font-stretch: normal;
@@ -130,7 +143,7 @@
     color: v.$accent-primary;
   }
   &__desc {
-    margin-top: 23px;
+    margin-top: 17px;
     font-size: 1.4rem;
     line-height: 2;
     letter-spacing: 0.28px;
