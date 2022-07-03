@@ -2,8 +2,15 @@
 
 .p-services {
   margin-top: 120px;
+	@include v.mq(lg){
+		margin-top: 160px;
+	}
   .c-button {
     margin-top: 28px;
+		@include v.mq(lg){
+			position: absolute;
+			bottom: -16px;left: 49%;
+		}
   }
 }
 
@@ -20,7 +27,16 @@
     #f0f0f0 91%
   );
   @include v.mq(lg) {
-    display: flex;
+		display: flex;
+		background: linear-gradient(
+			131deg,
+			#f0f0f0 0%,
+			#f0f0f0 68.5%,
+			white 68.5%,
+			white 68.5%,
+			white 90%,
+			#f0f0f0 90%
+		);
   }
 }
 
@@ -34,22 +50,21 @@
 
 .p-services__text-content {
 	margin-top: 26px;
-	@include v.mq(lg){
-		padding-left: 50%;
-		margin-right: unset;
-		margin-left: unset;
-	}
 	.c-section__title{
 		margin-top: 10px;
 	}
 	.c-section__desc{
 		margin-top: 15px;
 	}
-}
+	@include v.mq(lg){
+		margin-top: 34px;
+		padding-bottom: 38px;
+		padding-left: 49%;
+		margin-right: unset;
+		margin-left: unset;
+		.c-section__title{
+			margin-top: 28px;
+		}
 
-@include v.mq(lg){
-	.p-services .c-button{
-		position: absolute;
-		bottom: -32px;left: 50%;
 	}
 }

@@ -6,6 +6,8 @@ const hamburgerLines = document.querySelectorAll(".hamburger__line");
 const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
 const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
 const gNavText = [gNavTextEn, gNavTextJa];
+const mv = document.querySelector('.js-mv');
+
 
 // ヘッダーが現れるときのアクション
 const addClassAction = () => {
@@ -20,21 +22,23 @@ const addClassAction = () => {
       ele.classList.add("js-color-black");
     });
   });
+	mv.classList.add('top-0')
 };
 
 // ヘッダーが消えるときのアクション
 const removeClassAction = () => {
-  gNavText.forEach((ele) => {
-    header.classList.remove("fixed");
+	gNavText.forEach((ele) => {
+		header.classList.remove("fixed");
     headerLogo.classList.remove("display-none");
     headerLogoBlack.classList.remove("display-block");
     hamburgerLines.forEach((line) => {
-      line.classList.remove("hamburger__line--black");
+			line.classList.remove("hamburger__line--black");
     });
     ele.forEach((ele) => {
-      ele.classList.remove("js-color-black");
+			ele.classList.remove("js-color-black");
     });
   });
+	mv.classList.remove('top-0')
 };
 
 window.addEventListener("scroll", () => {

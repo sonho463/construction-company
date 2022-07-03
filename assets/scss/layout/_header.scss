@@ -44,10 +44,11 @@
     align-items: center;
   }
   &__logo {
-		width: 136px;
     width: 38%;
 		height: 29px;
-    // height: 26px;
+		@include v.mq(lg){
+			width: unset;
+		}
   }
 	&__logo-img--b{
 		display: none;
