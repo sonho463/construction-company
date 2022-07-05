@@ -6,27 +6,31 @@
   padding-bottom: 70px;
   background-image: url(../images/SP-assets/background-image-contact.jpg);
   background-size: cover;
-	@include v.mq(lg){
-		margin-top: 0;
-		padding-bottom: 80px;
-		background-image: url(../images/PC-assets/background-image-contact.jpg);
-		.c-section__heading-block{
-			justify-content: center;
-		}
-		.c-section__desc{
-			text-align: center;
-		}
-	}
+  @include v.mq(lg) {
+    margin-top: 0;
+    padding-top: 73px;
+    padding-bottom: 80px;
+    background-image: url(../images/PC-assets/background-image-contact.jpg);
+    .c-section__heading-block {
+      justify-content: center;
+    }
+    .c-section__desc {
+      text-align: center;
+    }
+  }
 }
 
-.p-contact__content{
-	.c-section__desc{
-		margin-top: 12px;
-		font-size: 1.6rem;
-		letter-spacing: 0;
-	}
+.p-contact__content {
+  .c-section__desc {
+    margin-top: 12px;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    @include v.mq(lg) {
+      margin-top: 28px;
+      letter-spacing: 0.025em;
+    }
+  }
 }
-
 
 .p-contact {
   .c-section__en-heading,
@@ -36,26 +40,41 @@
   }
 }
 
+@include v.mq(lg) {
+  .p-contact__list {
+    display: flex;
+    justify-content: center;
+    gap: 6.8%;
+  }
+}
+
 .p-contact__link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 48px;
   margin: 25px 0 24px;
-	padding: 0 7.2%;
+  padding: 0 7.2%;
   box-shadow: 0px 2px 4px 0 rgba(25, 25, 25, 0.46);
-	font-size: 1.4rem;
-	@include v.mq(lg){
-		height: 72px;
-		margin-top: 55px;
-		margin-bottom: 0;
-		justify-content: center;
-		gap: 16px;
-	}
+  font-size: 1.4rem;
+  @include v.mq(lg) {
+    height: 72px;
+    margin-top: 45px;
+    margin-bottom: 0;
+    justify-content: center;
+    gap: 16px;
+		font-size: 1.6rem;
+  }
   &::before {
     content: "";
     background-size: contain;
     height: 12px;
+		@include v.mq(lg){
+			background-size: 100%;
+			background-repeat: no-repeat;
+			height: 18px;
+			width:auto;
+		}
   }
   &::after {
     content: "";
@@ -66,34 +85,33 @@
   }
 }
 
-@include v.mq(lg){
-	.p-contact__list{
-		display: flex;
-		justify-content: center;
-		gap: 5.9%;
-	}
-}
-
 .p-contact__item {
-	@include v.mq(lg){
-		width: 23.4%;
-	}
+  @include v.mq(lg) {
+    width: 23.4%;
+    width: 26.3%;
+  }
   &:first-of-type {
     .p-contact__link {
       background-color: #b8614b;
-			&::before{
-				background-image: url(../images/SP-assets/Backhoe.svg);
-				width: 16px;
-			}
+      &::before {
+        background-image: url(../images/SP-assets/Backhoe.svg);
+        width: 16px;
+				@include v.mq(lg){
+				width: 24px;
+				}
+      }
     }
   }
   &:last-of-type {
     .p-contact__link {
       background-color: #191919;
-			&::before{
-				background-image: url(../images/SP-assets/Factory.svg);
-				width: 14px;
-			}
+      &::before {
+        background-image: url(../images/SP-assets/Factory.svg);
+        width: 14px;
+				@include v.mq(lg){
+				width: 20px;
+				}
+      }
     }
   }
 }

@@ -3,16 +3,23 @@
 .p-about {
   position: relative;
   margin-top: 120px;
-  padding-bottom: 120px;
 	@include v.mq(lg){
 		margin-top: calc(50px + 160px);
 	}
   .c-button {
     margin-top: 27px;
+		@include v.mq(lg){
+			margin-top: 38px;
+			margin-left: unset;
+		}
   }
 	.c-button__text{
 		margin-right: 27px;
 		letter-spacing: -.15em;
+		@include v.mq(lg){
+			margin-right: 16px;
+			letter-spacing: 0em;
+		}
 	}
 }
 
@@ -22,6 +29,9 @@
 	}
 	.c-section__desc{
 		margin-top: 11px;
+		@include v.mq(lg){
+			margin-top: 24px;
+		}
 	}
 }
 
@@ -33,11 +43,11 @@
 
   .p-about__text-content {
     position: absolute;
-    top: 6.1%;
+    top: 5.1%;
     left: 12.8%;
     width: 36.9%;
     background-color: #fff;
-    padding: 48px 3.5%;
+    padding: 15px 3.5% 46px;
   }
 }
 

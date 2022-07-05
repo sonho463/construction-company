@@ -1,17 +1,33 @@
 @use "../foundation/variables" as v;
 
 .p-works {
+  margin-top: 120px;
+  @include v.mq(lg) {
+    margin-top: 154px;
+  }
+
   .c-button {
     margin-top: 33px;
-		width: 68.5%;
+    width: 68.5%;
+		@include v.mq(lg){
+			margin-top: 37px;
+			width: 19%;
+		}
   }
-	.c-button__text{
-		margin-right: 8px;
-	}
+  .c-button__text {
+    margin-right: 8px;
+		@include v.mq(lg){
+			margin-right: 16px;
+		}
+  }
 }
 
 .p-works__article-block {
   margin-top: 34px;
+	@include v.mq(lg){
+		margin-top: 46px;
+		margin-left: 9px;
+	}
 }
 
 .p-works__content {
@@ -26,26 +42,35 @@
     white 88%,
     #f0f0f0 88%
   );
-	@include v.mq(lg){
-		padding-bottom: 0;
-		background: linear-gradient(
-			50deg,
-			#f0f0f0 0%,
-			#f0f0f0 18%,
-			white 18%,
-			white 18%,
-			white 82%,
-			#f0f0f0 82%
-		);
-	}
+  @include v.mq(lg) {
+		padding-top: 0;
+    padding-bottom: 0;
+    background: linear-gradient(
+      49deg,
+      #f0f0f0 0%,
+      #f0f0f0 17%,
+      white 17%,
+      white 17%,
+      white 82.5%,
+      #f0f0f0 82.5%
+    );
+  }
 }
 
-.p-works__text-content{
-	.c-section__title{
-		margin-top: 12px;
-	}
-	.c-section__desc{
-		margin-top: 12px;
+.p-works__text-content {
+  .c-section__title {
+    margin-top: 12px;
+  }
+  .c-section__desc {
+    margin-top: 12px;
+  }
+	@include v.mq(lg){
+		.c-section__title {
+			margin-top: 26px;
+		}
+		.c-section__desc {
+			margin-top: 24px;
+		}
 	}
 }
 
@@ -71,26 +96,25 @@
   }
 }
 
-
-
 .p-works__image-ballet {
   height: 160px;
   display: flex;
   align-items: flex-end;
   background-size: cover;
-	@include v.mq(lg){
-		height: 240px;
-		align-items: flex-start;
-	}
+  @include v.mq(lg) {
+    height: 240px;
+    align-items: flex-start;
+  }
 }
 
 .p-works__number {
   width: 64px;
   height: 40px;
-	@include v.mq(lg){
-		width: 56px;height: 56px;
-		transform: translate(-30%, -30%);
-	}
+  @include v.mq(lg) {
+    width: 56px;
+    height: 56px;
+    transform: translate(-30%, -30%);
+  }
   background-color: v.$main-primary;
   // font-family: Lato;
   font-size: 2rem;
@@ -105,9 +129,9 @@
 .p-works__item {
   @include v.mq(lg) {
     width: 34.6%;
-		padding-bottom: 36px;
-		box-shadow: 0px 0px 10px 0px rgba(25, 25, 25, 0.25);
-		background-color: v.$color-white;
+    padding-bottom: 36px;
+    box-shadow: 0px 0px 10px 0px rgba(25, 25, 25, 0.25);
+    background-color: v.$color-white;
   }
   &:first-of-type {
     .p-works__image-ballet {
@@ -136,17 +160,23 @@
     margin-top: 23px;
     font-size: 2rem;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1;
-    letter-spacing: normal;
     color: v.$accent-primary;
+		@include v.mq(lg){
+			margin-top: 30px;
+			font-size: 2.4rem;
+		}
   }
   &__desc {
-    margin-top: 17px;
+		margin-top: 17px;
     font-size: 1.4rem;
     line-height: 2;
     letter-spacing: 0.28px;
     color: v.$color-black;
+		@include v.mq(lg){
+			margin-top: 20px;
+			font-size: 1.6rem;
+			letter-spacing: 0;
+		}
   }
 }

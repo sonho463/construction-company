@@ -18,6 +18,7 @@
 @use "./component/inner";
 @use "./component/section";
 @use "./component/button";
+@use "./component/animation";
 
 // *--------------*
 // project
@@ -35,3 +36,4 @@
 // *--------------*
 @use "./utility/display";
 @use "./utility/font";
+@use "./utility/scale";

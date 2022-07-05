@@ -11,6 +11,10 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap"
 		rel="stylesheet">
+	<!-- swiper.js -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
 	<!-- メインスタイルシート -->
 	<link rel="stylesheet" href="./assets/css/style.css">
 
@@ -77,7 +81,22 @@
 
 	<div class="l-main">
 		<section class="p-mv js-mv">
-			<div class="p-mv__bg">
+			<!-- <div class="p-mv__bg--gradient"></div> -->
+			<div class="p-mv__bg swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="p-mv__bg-image-1 slide-img"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="p-mv__bg-image-2 slide-img"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="p-mv__bg-image-3 slide-img"></div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<div class="p-mv__inner">
 				<h2 class="p-mv__heading">
 					CHALLENGE<br class="u-active_pc">
 					FROM<br class="u-active_sp">
@@ -163,8 +182,11 @@
 							<p class="c-section__ja-heading">園崎組について</p>
 						</div>
 						<p class="c-section__desc">
-							園崎組は埼玉県秩父市にて、主に土木工事にて社会基盤を支える企業になります。
-							また、自社工場において施工に必要とされる各種資材も生産しており、各業者に提供することで、社会基盤の構築・整備に貢献しております。
+							園崎組は埼玉県秩父市にて、主に土木工事にて<br class="u-active_pc">
+							社会基盤を支える企業になります。<br class="u-active_pc">
+							また、自社工場において施工に必要とされる<br class="u-active_pc">
+							各種資材も生産しており、各業者に提供することで、<br class="u-active_pc">
+							社会基盤の構築・整備に貢献しております。
 						</p>
 						<a href="" class="c-button">
 							<span class="c-button__text">
@@ -189,7 +211,7 @@
 						<p class="c-section__ja-heading">園崎組の実績</p>
 					</div>
 					<h3 class="c-section__title">
-						社会を基礎から、<br class="u-active-sp">
+						社会を基礎から、<br class="u-active_sp">
 						変革してきたプロジェクト
 					</h3>
 					<p class="c-section__desc">

@@ -7,7 +7,7 @@
   padding: 30px 5.5% 0;
   color: v.$color-white;
   @include v.mq(lg) {
-    padding: 87px 12.4% 0;
+    padding: 83px 12.8% 0;
   }
 }
 
@@ -23,18 +23,20 @@
   .l-footer__menu__outer {
     font-size: 1.6rem;
     position: absolute;
-    top: 50%;
-    right: 12.4%;
-    transform: translateY(-50%);
+    top: 34%;
+    right: 11.8%;
     writing-mode: vertical-lr;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.2em;
   }
 }
+
+
 
 .l-footer__menu:nth-of-type(2) {
   margin-top: 41px;
   @include v.mq(lg) {
     margin-top: 0;
+		margin-left: 54px;
   }
 }
 
@@ -42,6 +44,10 @@
   font-family: NotoSansJP;
   font-size: 14px;
   line-height: 2.65;
+	@include v.mq(lg){
+		font-size: 1.6rem;
+		line-height: 2.5;
+	}
 }
 
 .l-footer__info {
@@ -49,7 +55,9 @@
 	margin-top: 20px;
 	line-height: 2;
   @include v.mq(lg) {
-    line-height: 2;
+    line-height: 2.3;
+		font-size: 1.6rem;
+		margin-top: 29px;
   }
 }
 
@@ -63,11 +71,11 @@
   padding-right: 5.3%;
   background-color: #191919;
   @include v.mq(lg) {
-    margin-top: 120px;
+    margin-top: 108px;
     height: 60px;
     line-height: 60px;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 17%;
+    padding-right: 17%;
   }
 
   // font

@@ -4,26 +4,41 @@
   position: relative;
   padding-top: 56px;
   top: -56px;
+	background-image: -moz-linear-gradient(
+			0deg,
+			rgb(75, 108, 183) 0%,
+			rgb(24, 40, 72) 100%
+		);
+		background-image: -webkit-linear-gradient(
+			0deg,
+			rgb(75, 108, 183) 0%,
+			rgb(24, 40, 72) 100%
+		);
+		background-image: -ms-linear-gradient(
+			0deg,
+			rgb(75, 108, 183) 0%,
+			rgb(24, 40, 72) 100%
+		);
   @include v.mq(lg) {
     top: -80px;
     padding-top: 80px;
   }
   // background-color: v.$main-primary;
-  background-image: -moz-linear-gradient(
-    0deg,
-    rgb(75, 108, 183) 0%,
-    rgb(24, 40, 72) 100%
-  );
-  background-image: -webkit-linear-gradient(
-    0deg,
-    rgb(75, 108, 183) 0%,
-    rgb(24, 40, 72) 100%
-  );
-  background-image: -ms-linear-gradient(
-    0deg,
-    rgb(75, 108, 183) 0%,
-    rgb(24, 40, 72) 100%
-  );
+  // background-image: -moz-linear-gradient(
+  //   0deg,
+  //   rgb(75, 108, 183) 0%,
+  //   rgb(24, 40, 72) 100%
+  // );
+  // background-image: -webkit-linear-gradient(
+  //   0deg,
+  //   rgb(75, 108, 183) 0%,
+  //   rgb(24, 40, 72) 100%
+  // );
+  // background-image: -ms-linear-gradient(
+  //   0deg,
+  //   rgb(75, 108, 183) 0%,
+  //   rgb(24, 40, 72) 100%
+  // );
 
   color: v.$color-white;
 }
@@ -32,14 +47,62 @@
 	top:0;
 }
 
-.p-mv__bg {
-  background-image: url(../images/SP-assets/top-image-1.png);
-  background-size: cover;
+.p-mv__animation{
+	// @include v.animation($name: zoomMv);
+	transition: 1s;
+	transform: scale(1.5);
+}
+
+.p-mv__bg{
+	&-image-1{
+		width: inherit;
+		height: inherit;
+		position: inherit;
+		background-image: url(../images/SP-assets/top-image-1.png);
+	}
+	&-image-2{
+		width: inherit;
+		height: inherit;
+		position: inherit;
+		background-image: url(../images/SP-assets/top-image-2.png);
+	}
+	&-image-3{
+		width: inherit;
+		height: inherit;
+		position: inherit;
+		background-image: url(../images/SP-assets/top-image-3.png);
+	}
+	height: 611px;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	z-index:1;
+	// padding: 100px 5.1% 0;
+	&--gradient{
+		position: absolute;
+		height: 611px;
+		width: 100%;
+		z-index:3;
+
+	}
+	@include v.mq(lg) {
+		height: 688px;
+		background-image: url(../images/PC-assets/top-image-1.png);
+		// padding: 98px 13% 0;
+	}
+}
+
+.p-mv__inner {
+	position: relative;
+	z-index:5;
+	// position: relative;
+  // background-image: url(../images/SP-assets/top-image-1.png);
+  // background-size: cover;
   height: 611px;
   padding: 100px 5.1% 0;
   @include v.mq(lg) {
     height: 688px;
-    background-image: url(../images/PC-assets/top-image-1.png);
+    // background-image: url(../images/PC-assets/top-image-1.png);
     padding: 98px 13% 0;
   }
 }
@@ -209,4 +272,25 @@
 			padding: 4px 17px;
 		}
   }
+}
+
+.swiper-slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img { /* 12秒かけて拡大させる */
+    -webkit-animation: zoomUp 12s linear 0s;
+    animation: zoomUp 12s linear 0s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.slide-img {
+    background-size: cover;
+    background-position: center center; /* 背景画像は中央を軸に表示させる */
+    // height: 600px; /* 600pxの高さで表示させる */
 }

@@ -24,3 +24,15 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin animation(
+	$name: '',
+	$delay:0,
+	$duration: 0.3s,
+	$timing: ease,
+) {
+	animation-name: $name;
+	animation-delay: $delay;
+	animation-duration: $duration;
+	animation-timing-function: $timing;
+}
