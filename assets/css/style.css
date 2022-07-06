@@ -561,8 +561,12 @@ a:hover img {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  align-items: center;
+}
+@media screen and (min-width:1024px) {
+  .l-header__inner {
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .l-header__logo {
   width: 38%;
@@ -597,12 +601,24 @@ a:hover img {
 }
 .hamburger__line:first-of-type {
   transform: translateY(-5px);
+  transition: transform 0.3s;
 }
 .hamburger__line:last-of-type {
   transform: translateY(5px);
+  transition: transform 0.3s;
 }
 .hamburger__line--black {
   background-color: #191919;
+}
+
+.hamburger__open .hamburger__line:first-of-type {
+  transform: translateY(1px) rotate(315deg);
+}
+.hamburger__open .hamburger__line:nth-of-type(2) {
+  display: none;
+}
+.hamburger__open .hamburger__line:last-of-type {
+  transform: translateY(-1px) rotate(-315deg);
 }
 
 .l-footer {
@@ -832,8 +848,9 @@ a:hover img {
 .g-nav {
   position: absolute;
   transform: translateX(100%);
-  transition: 0.3s;
+  transition: transform 0.3s;
   width: 100%;
+  overflow-x: hidden;
   padding-top: 56px;
   position: absolute;
   display: block;
@@ -847,21 +864,25 @@ a:hover img {
     position: static;
     width: unset;
     transform: translate(0);
+    margin-top: 20px;
     padding-top: 0;
     display: block;
     margin-left: 6px;
     background-color: unset;
+    height: 100%;
   }
 }
 
 .g-nav.ham-open {
-  transition: 0.3s;
+  transition: transform 0.3s;
   transform: translateX(0);
 }
 
 .g-nav__list {
   display: flex;
   flex-direction: column;
+  padding-top: 76px;
+  padding-bottom: 100px;
   height: 100%;
   width: 100%;
 }
@@ -869,6 +890,8 @@ a:hover img {
   .g-nav__list {
     width: unset;
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
     height: 22px;
     flex-direction: row;
   }
@@ -879,9 +902,15 @@ a:hover img {
   transform: skew(-40deg);
   padding: 0 18px;
 }
+.g-nav__item + .g-nav__item {
+  margin-top: 30px;
+}
 @media screen and (min-width:1024px) {
   .g-nav__item:not(:last-of-type) {
     border-right: solid #fff 1px;
+  }
+  .g-nav__item + .g-nav__item {
+    margin-top: 0;
   }
 }
 

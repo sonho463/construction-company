@@ -41,8 +41,9 @@
     justify-content: space-between;
 		align-items: center;
 		@include v.mq(lg){
-		}justify-content: flex-start;
-    align-items: center;
+			justify-content: flex-start;
+			align-items: center;
+		}
   }
   &__logo {
     width: 38%;
@@ -73,12 +74,28 @@
     background-color: v.$color-white;
     &:first-of-type {
       transform: translateY(-5px);
+			transition: transform .3s;
     }
     &:last-of-type {
-      transform: translateY(5px);
+			transform: translateY(5px);
+			transition: transform .3s;
     }
   }
 	&__line--black{
 		background-color: v.$color-black;
+	}
+}
+
+.hamburger__open{
+	.hamburger__line{
+		&:first-of-type {
+      transform: translateY(1px) rotate(315deg);
+    }
+		&:nth-of-type(2){
+			display: none;
+		}
+    &:last-of-type {
+      transform: translateY(-1px) rotate(-315deg);
+    }
 	}
 }

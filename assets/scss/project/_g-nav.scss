@@ -3,8 +3,9 @@
 .g-nav {
   position: absolute;
   transform: translateX(100%);
-  transition: 0.3s;
+  transition: transform 0.3s;
   width: 100%;
+  overflow-x: hidden;
   padding-top: 56px;
   position: absolute;
   display: block;
@@ -17,27 +18,33 @@
     position: static;
     width: unset;
     transform: translate(0);
+		margin-top: 20px;
     padding-top: 0;
     display: block;
     margin-left: 6px;
     background-color: unset;
+		height: 100%;
   }
 }
 
 .g-nav.ham-open {
-  transition: 0.3s;
+  transition: transform 0.3s;
   transform: translateX(0);
 }
 
 .g-nav__list {
   display: flex;
   flex-direction: column;
+  padding-top: 76px;
+  padding-bottom: 100px;
   height: 100%;
   width: 100%;
   // align-items: center;
   @include v.mq(lg) {
     width: unset;
     justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
     height: 22px;
     flex-direction: row;
   }
@@ -47,10 +54,17 @@
   border-right: none;
   transform: skew(-40deg);
   padding: 0 18px;
+  & + .g-nav__item {
+    margin-top: 30px;
+  }
+
   @include v.mq(lg) {
-    &:not(:last-of-type) {
-      border-right: solid v.$color-white 1px;
+		&:not(:last-of-type) {
+			border-right: solid v.$color-white 1px;
     }
+		& + .g-nav__item {
+			margin-top: 0;
+		}
   }
 }
 

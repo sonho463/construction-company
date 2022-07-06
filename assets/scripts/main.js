@@ -2,17 +2,13 @@
 const header = document.querySelector(".js-header");
 const headerLogo = document.querySelector(".js-header__logo");
 const headerLogoBlack = document.querySelector(".js-header__logo--b");
+const hamburger = document.querySelector('.hamburger');
 const hamburgerLines = document.querySelectorAll(".hamburger__line");
 const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
 const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
 const gNavText = [gNavTextEn, gNavTextJa];
 const mv = document.querySelector(".js-mv");
 const gNav = document.querySelector(".g-nav");
-
-// ハンバーガーメニューオープン
-const hamOpen = () => {
-	gNav.classList.toggle('ham-open');
-};
 
 // ヘッダーが現れるときのアクション
 const addClassAction = () => {
@@ -61,6 +57,50 @@ window.addEventListener("scroll", () => {
     removeClassAction();
   }
 });
+
+// ハンバーガーメニューオープン
+const hamOpenAction=()=>{
+	gNav.classList.add('ham-open');
+	gNavTextJa.forEach((ele)=>{
+		ele.classList.remove("js-color-black");
+	})
+	gNavTextEn.forEach((ele)=>{
+		ele.classList.remove("js-color-black");
+	})
+	headerLogo.classList.remove("display-none");
+	headerLogoBlack.classList.remove("display-block");
+	hamburger.classList.add('hamburger__open');
+	hamburgerLines.forEach((line) => {
+		line.classList.remove("hamburger__line--black");
+	});
+
+}
+const hamCloseAction=()=>{
+	gNav.classList.remove('ham-open');
+	gNavTextJa.forEach((ele)=>{
+		ele.classList.add("js-color-black");
+	})
+	gNavTextEn.forEach((ele)=>{
+		ele.classList.add("js-color-black");
+	})
+	const offsetY = window.scrollY;
+if(offsetY!==0){
+	headerLogo.classList.add("display-none");
+	headerLogoBlack.classList.add("display-block");
+	hamburgerLines.forEach((line) => {
+		line.classList.add("hamburger__line--black");
+	});
+}
+	hamburger.classList.remove('hamburger__open');
+}
+
+const hamOpen = () => {
+	if(gNav.classList.contains('ham-open')){
+		hamCloseAction();
+	} else {
+		hamOpenAction();
+	}
+};
 
 // Swiper.js
 const swiper = new Swiper(".swiper", {
