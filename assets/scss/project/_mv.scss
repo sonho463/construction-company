@@ -4,21 +4,21 @@
   position: relative;
   padding-top: 56px;
   top: -56px;
-	background-image: -moz-linear-gradient(
-			0deg,
-			rgb(75, 108, 183) 0%,
-			rgb(24, 40, 72) 100%
-		);
-		background-image: -webkit-linear-gradient(
-			0deg,
-			rgb(75, 108, 183) 0%,
-			rgb(24, 40, 72) 100%
-		);
-		background-image: -ms-linear-gradient(
-			0deg,
-			rgb(75, 108, 183) 0%,
-			rgb(24, 40, 72) 100%
-		);
+  background-image: -moz-linear-gradient(
+    0deg,
+    rgb(75, 108, 183) 0%,
+    rgb(24, 40, 72) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    0deg,
+    rgb(75, 108, 183) 0%,
+    rgb(24, 40, 72) 100%
+  );
+  background-image: -ms-linear-gradient(
+    0deg,
+    rgb(75, 108, 183) 0%,
+    rgb(24, 40, 72) 100%
+  );
   @include v.mq(lg) {
     top: -80px;
     padding-top: 80px;
@@ -43,59 +43,90 @@
   color: v.$color-white;
 }
 
-.top-0{
-	top:0;
+.top-0 {
+  top: 0;
 }
 
-.p-mv__animation{
-	// @include v.animation($name: zoomMv);
-	transition: 1s;
-	transform: scale(1.5);
+.p-mv__animation {
+  // @include v.animation($name: zoomMv);
+  transition: 1s;
+  transform: scale(1.5);
 }
 
-.p-mv__bg{
-	&-image-1{
-		width: inherit;
-		height: inherit;
-		position: inherit;
+.p-mv__bg {
+  &-image-1 {
 		background-image: url(../images/SP-assets/top-image-1.png);
-	}
-	&-image-2{
-		width: inherit;
-		height: inherit;
-		position: inherit;
+		@include v.mq(lg){
+			background-image: url(../images/PC-assets/top-image-1.png);
+		}
+  }
+  &-image-2 {
 		background-image: url(../images/SP-assets/top-image-2.png);
-	}
-	&-image-3{
-		width: inherit;
-		height: inherit;
-		position: inherit;
+		@include v.mq(lg){
+			background-image: url(../images/PC-assets/top-image-2.png);
+		}
+  }
+  &-image-3 {
 		background-image: url(../images/SP-assets/top-image-3.png);
-	}
-	height: 611px;
-	width: 100%;
-	position: absolute;
-	background-size: cover;
-	z-index:1;
-	// padding: 100px 5.1% 0;
-	&--gradient{
-		position: absolute;
-		height: 611px;
-		width: 100%;
-		z-index:3;
+		@include v.mq(lg){
+			background-image: url(../images/PC-assets/top-image-3.png);
+		}
+  }
+  height: 611px;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  z-index: 1;
+  // padding: 100px 5.1% 0;
+  &--gradient {
+    position: absolute;
+    height: 611px;
+    width: 100%;
+    z-index: 3;
+  }
+  @include v.mq(lg) {
+    height: 688px;
+    // padding: 98px 13% 0;
+  }
+}
 
-	}
-	@include v.mq(lg) {
-		height: 688px;
-		background-image: url(../images/PC-assets/top-image-1.png);
-		// padding: 98px 13% 0;
-	}
+.swiper-slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img
+,.swiper-slide-prev .slide-img
+{
+	/* 12秒かけて拡大させる */
+  -webkit-animation: zoomUp 12s linear 0s;
+  animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+	transform-origin: center center;
+}
+.swiper-slide-prev .slide-img{
+	margin: 25px;
+	transition: 2s;
+}
+
+.slide-img {
+	// overflow: hidden;
+  width: inherit;
+  height: inherit;
+  position: inherit;
+  background-size: cover;
+  background-position: center center; /* 背景画像は中央を軸に表示させる */
+  // height: 600px; /* 600pxの高さで表示させる */
 }
 
 .p-mv__inner {
-	position: relative;
-	z-index:5;
-	// position: relative;
+  position: relative;
+  z-index: 5;
+  // position: relative;
   // background-image: url(../images/SP-assets/top-image-1.png);
   // background-size: cover;
   height: 611px;
@@ -128,53 +159,53 @@
   }
   &__sub-heading__wrapper {
     margin-top: 22px;
-		@include v.mq(lg){
-			display: flex;
-			flex-direction: column;
-		}
+    @include v.mq(lg) {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__sub-heading {
     display: inline-block;
     display: flex;
-		align-items: center;
-		width: fit-content;
-		height: 36px;
+    align-items: center;
+    width: fit-content;
+    height: 36px;
     background-color: v.$color-white;
     transform: skew(-28deg) translateX(10px);
     filter: drop-shadow(3px 2px 0px v.$main-primary);
     padding-left: 14px;
     padding-right: 16px;
     @include v.mq(lg) {
-			transform: skew(-39deg) translateX(-5px);
+      transform: skew(-39deg) translateX(-5px);
       // display: inline-block;
       padding: 5px 22px 5px 24px;
-			margin-left: 31px;
-			height: unset;
+      margin-left: 31px;
+      height: unset;
     }
 
     &:nth-of-type(2) {
       margin-top: 12px;
-			@include v.mq(lg){
-				margin-top: 20px;
-			}
+      @include v.mq(lg) {
+        margin-top: 20px;
+      }
     }
     &__skew-box {
       display: inline-block;
       transform: skew(28deg);
-			@include v.mq(lg){
-				transform: skew(40deg);
-			}
+      @include v.mq(lg) {
+        transform: skew(40deg);
+      }
     }
     &__text {
       color: v.$main-primary;
       font-size: 1.95rem;
       font-weight: bold;
-			letter-spacing: 0.025em;
+      letter-spacing: 0.025em;
       // line-height: 36px;
       text-align: left;
       @include v.mq(lg) {
         font-size: 3.2rem;
-				letter-spacing: 0;
+        letter-spacing: 0;
       }
     }
   }
@@ -185,39 +216,39 @@
   margin-top: 135px;
   @include v.mq(lg) {
     display: flex;
-		margin-top: 122px;
+    margin-top: 122px;
   }
 }
 
 .p-mv__news-title {
-	display: flex;
-	align-items: center;
-	width: fit-content;
+  display: flex;
+  align-items: center;
+  width: fit-content;
   background-color: v.$main-primary;
-	height: 22px;
+  height: 22px;
   // padding: 2px 25px 2px 13px;
-	padding-left: 12px;
-	padding-right: 22px;
-	clip-path: polygon(85% 0, 0 0, 0 100%, 100% 100%);
-	&__text{
-		margin-top: -2px;
-		font-size: 1.4rem;
-		@include v.mq(lg){
-			font-size: 1.6rem;
-		}
-	}
-	@include v.mq(lg){
-		// display: flex;
-		// align-items: center;
-		justify-content: center;
-		padding: 2px 88px 2px 41px;
-		height: 64px;
-		clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
-	}
+  padding-left: 12px;
+  padding-right: 22px;
+  clip-path: polygon(85% 0, 0 0, 0 100%, 100% 100%);
+  &__text {
+    margin-top: -2px;
+    font-size: 1.4rem;
+    @include v.mq(lg) {
+      font-size: 1.6rem;
+    }
+  }
+  @include v.mq(lg) {
+    // display: flex;
+    // align-items: center;
+    justify-content: center;
+    padding: 2px 88px 2px 41px;
+    height: 64px;
+    clip-path: polygon(100% 0, 0 0, 0 100%, 69% 100%);
+  }
 }
 
 .p-mv__headline {
-	position: relative;
+  position: relative;
   background-color: v.$color-white;
   height: 48px;
   padding: 14px 2.4%;
@@ -229,35 +260,35 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-	@include v.mq(lg){
-		margin-left: -55px;
-		flex:1;
-		font-size:1.6rem;
-		height: 64px;
-		justify-content: flex-start;
-		padding-left: 75px;
-		&::after{
-			content: '';
-			position:absolute;
-			right: 0;
-			display: block;
-			width: 120px;
-			height: 100%;
-			color: v.$color-white;
-			background-color: v.$main-primary;
-			clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
-			background-image: url(../images/arrow.png);
-			background-size: 16px 4px;
-			background-repeat: no-repeat;
-			background-position: 72px center;
-		}
-	}
+  @include v.mq(lg) {
+    margin-left: -55px;
+    flex: 1;
+    font-size: 1.6rem;
+    height: 64px;
+    justify-content: flex-start;
+    padding-left: 75px;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      display: block;
+      width: 120px;
+      height: 100%;
+      color: v.$color-white;
+      background-color: v.$main-primary;
+      clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
+      background-image: url(../images/arrow.png);
+      background-size: 16px 4px;
+      background-repeat: no-repeat;
+      background-position: 72px center;
+    }
+  }
   span {
     display: inline-block;
   }
-	&__date{
-		letter-spacing: -0.01em;
-	}
+  &__date {
+    letter-spacing: -0.01em;
+  }
   &__tag {
     // width: 65px;
     // height: 20px;
@@ -267,30 +298,9 @@
     background-color: #b8614b;
     color: v.$color-white;
     font-size: 1.2rem;
-		@include v.mq(lg){
-			margin: 0 24px;
-			padding: 4px 17px;
-		}
+    @include v.mq(lg) {
+      margin: 0 24px;
+      padding: 4px 17px;
+    }
   }
-}
-
-.swiper-slide {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img { /* 12秒かけて拡大させる */
-    -webkit-animation: zoomUp 12s linear 0s;
-    animation: zoomUp 12s linear 0s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.slide-img {
-    background-size: cover;
-    background-position: center center; /* 背景画像は中央を軸に表示させる */
-    // height: 600px; /* 600pxの高さで表示させる */
 }

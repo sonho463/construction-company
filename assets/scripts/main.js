@@ -68,12 +68,12 @@ const swiper = new Swiper(".swiper", {
 	autoplay: true,
 	centeredSlides: true,
 	effect: "fade",
-	breakpoints: {
-		768: {
-			slidesPerView: 3.5,
-			// spaceBetween: 020
-		},
-	},
+	// breakpoints: {
+	// 	768: {
+	// 		slidesPerView: 3.5,
+	// 		// spaceBetween: 020
+	// 	},
+	// },
 
 	// If we need pagination
 	pagination: {

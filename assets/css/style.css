@@ -443,7 +443,6 @@ template {
 *:before,
 *:after {
   box-sizing: border-box;
-  outline: 1px solid pink;
 }
 
 html {
@@ -811,10 +810,10 @@ a:hover img {
 }
 
 @keyframes zoomUp {
-  from {
+  0% {
     transform: scale(1);
   }
-  to {
+  100% {
     transform: scale(1.2);
   }
 }
@@ -893,22 +892,28 @@ a:hover img {
   z-index: 1;
 }
 .p-mv__bg-image-1 {
-  width: inherit;
-  height: inherit;
-  position: inherit;
   background-image: url(../images/SP-assets/top-image-1.png);
 }
+@media screen and (min-width:1024px) {
+  .p-mv__bg-image-1 {
+    background-image: url(../images/PC-assets/top-image-1.png);
+  }
+}
 .p-mv__bg-image-2 {
-  width: inherit;
-  height: inherit;
-  position: inherit;
   background-image: url(../images/SP-assets/top-image-2.png);
 }
+@media screen and (min-width:1024px) {
+  .p-mv__bg-image-2 {
+    background-image: url(../images/PC-assets/top-image-2.png);
+  }
+}
 .p-mv__bg-image-3 {
-  width: inherit;
-  height: inherit;
-  position: inherit;
   background-image: url(../images/SP-assets/top-image-3.png);
+}
+@media screen and (min-width:1024px) {
+  .p-mv__bg-image-3 {
+    background-image: url(../images/PC-assets/top-image-3.png);
+  }
 }
 .p-mv__bg--gradient {
   position: absolute;
@@ -919,8 +924,37 @@ a:hover img {
 @media screen and (min-width:1024px) {
   .p-mv__bg {
     height: 688px;
-    background-image: url(../images/PC-assets/top-image-1.png);
   }
+}
+
+.swiper-slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+  /* 12秒かけて拡大させる */
+  -webkit-animation: zoomUp 12s linear 0s;
+  animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  transform-origin: center center;
+}
+
+.swiper-slide-prev .slide-img {
+  margin: 25px;
+  transition: 2s;
+}
+
+.slide-img {
+  width: inherit;
+  height: inherit;
+  position: inherit;
+  background-size: cover;
+  background-position: center center; /* 背景画像は中央を軸に表示させる */
 }
 
 .p-mv__inner {
@@ -1112,26 +1146,6 @@ a:hover img {
     margin: 0 24px;
     padding: 4px 17px;
   }
-}
-
-.swiper-slide {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img { /* 12秒かけて拡大させる */
-  -webkit-animation: zoomUp 12s linear 0s;
-  animation: zoomUp 12s linear 0s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.slide-img {
-  background-size: cover;
-  background-position: center center; /* 背景画像は中央を軸に表示させる */
 }
 
 .p-services {
