@@ -6,8 +6,13 @@ const hamburgerLines = document.querySelectorAll(".hamburger__line");
 const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
 const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
 const gNavText = [gNavTextEn, gNavTextJa];
-const mv = document.querySelector('.js-mv');
+const mv = document.querySelector(".js-mv");
+const gNav = document.querySelector(".g-nav");
 
+// ハンバーガーメニューオープン
+const hamOpen = () => {
+	gNav.classList.toggle('ham-open');
+};
 
 // ヘッダーが現れるときのアクション
 const addClassAction = () => {
@@ -22,23 +27,23 @@ const addClassAction = () => {
       ele.classList.add("js-color-black");
     });
   });
-	mv.classList.add('top-0')
+  mv.classList.add("top-0");
 };
 
 // ヘッダーが消えるときのアクション
 const removeClassAction = () => {
-	gNavText.forEach((ele) => {
-		header.classList.remove("fixed");
+  gNavText.forEach((ele) => {
+    header.classList.remove("fixed");
     headerLogo.classList.remove("display-none");
     headerLogoBlack.classList.remove("display-block");
     hamburgerLines.forEach((line) => {
-			line.classList.remove("hamburger__line--black");
+      line.classList.remove("hamburger__line--black");
     });
     ele.forEach((ele) => {
-			ele.classList.remove("js-color-black");
+      ele.classList.remove("js-color-black");
     });
   });
-	mv.classList.remove('top-0')
+  mv.classList.remove("top-0");
 };
 
 window.addEventListener("scroll", () => {
@@ -59,36 +64,36 @@ window.addEventListener("scroll", () => {
 
 // Swiper.js
 const swiper = new Swiper(".swiper", {
-	// Optional parameters
-	direction: "horizontal",
-	loop: true,
-	slidesPerView: 1,
-	spaceBetween: 0,
-	speed: 1000,
-	autoplay: true,
-	centeredSlides: true,
-	effect: "fade",
-	// breakpoints: {
-	// 	768: {
-	// 		slidesPerView: 3.5,
-	// 		// spaceBetween: 020
-	// 	},
-	// },
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  speed: 1000,
+  autoplay: true,
+  centeredSlides: true,
+  effect: "fade",
+  // breakpoints: {
+  // 	768: {
+  // 		slidesPerView: 3.5,
+  // 		// spaceBetween: 020
+  // 	},
+  // },
 
-	// If we need pagination
-	pagination: {
-		el: ".swiper-pagination",
-	},
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-	// Navigation arrows
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-	// And if we need scrollbar
-	scrollbar: {
-		el: ".swiper-scrollbar",
-		draggable: true,
-	},
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
 });

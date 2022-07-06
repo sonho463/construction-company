@@ -1,18 +1,30 @@
 // ヘッダーとmvとcv-buttonの調整
 
-.l-header{
-	z-index:200;
+.l-header {
+  z-index: 200;
 }
 
-.l-main{
-	z-index: 5;
+.l-main {
+  z-index: 5;
 }
 
 //mv-headline
 
 .p-mv__news-title {
-	z-index:2;
+  z-index: 2;
 }
 .p-mv__headline {
-	z-index:1;
+  z-index: 1;
+}
+
+// ハンバーガーメニューオープン
+.l-header__logo {
+  z-index: 3;
+}
+
+.g-nav.ham-open {
+  z-index: 2;
+}
+.hamburger {
+  z-index: 3;
 }
