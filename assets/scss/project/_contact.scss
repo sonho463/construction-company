@@ -1,14 +1,14 @@
 @use "../foundation/variables" as v;
 
 .p-contact {
-  margin-top: 118px;
-  padding-top: 82px;
+  margin-top: calc(118px - 56px);
+  padding-top: calc(82px + 56px);
   padding-bottom: 70px;
   background-image: url(../images/SP-assets/background-image-contact.jpg);
   background-size: cover;
   @include v.mq(lg) {
-    margin-top: 0;
-    padding-top: 73px;
+    margin-top: -80px;
+    padding-top: calc(73px + 80px);
     padding-bottom: 80px;
     background-image: url(../images/PC-assets/background-image-contact.jpg);
     .c-section__heading-block {

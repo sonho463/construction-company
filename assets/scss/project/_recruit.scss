@@ -1,12 +1,13 @@
 @use "../foundation/variables" as v;
 
 .p-recruit {
-  margin-top: 104px;
+  margin-top: calc(104px - 56px);
+	padding-top: 56px;
   @include v.mq(lg) {
-		margin-top: 158px;
-    background-color: #f0f0f0;
-    padding-top: 75px;
+		margin-top: calc(158px - 80px);
+    padding-top: calc(75px + 80px);
     padding-bottom: 80px;
+    background-color: #f0f0f0;
     .c-section__heading-block {
       justify-content: center;
     }

@@ -1,21 +1,24 @@
 @use "../foundation/variables" as v;
 
 .p-services {
-  margin-top: 120px;
-	@include v.mq(lg){
-		margin-top: 160px;
-	}
+  margin-top: calc(120px - 56px);
+	padding-top: 56px;
+  @include v.mq(lg) {
+    margin-top: calc(160px - 80px);
+		padding-top: 80px;
+  }
   .c-button {
     margin-top: 28px;
-		@include v.mq(lg){
-			position: absolute;
-			bottom: -16px;left: 49%;
-		}
+    @include v.mq(lg) {
+      position: absolute;
+      bottom: -16px;
+      left: 49%;
+    }
   }
 }
 
 .p-services__content {
-	position: relative;
+  position: relative;
   padding-bottom: 48px;
   background: linear-gradient(
     115deg,
@@ -27,44 +30,43 @@
     #f0f0f0 91%
   );
   @include v.mq(lg) {
-		display: flex;
-		background: linear-gradient(
-			131deg,
-			#f0f0f0 0%,
-			#f0f0f0 68.5%,
-			white 68.5%,
-			white 68.5%,
-			white 90%,
-			#f0f0f0 90%
-		);
+    display: flex;
+    background: linear-gradient(
+      131deg,
+      #f0f0f0 0%,
+      #f0f0f0 68.5%,
+      white 68.5%,
+      white 68.5%,
+      white 90%,
+      #f0f0f0 90%
+    );
   }
 }
 
-.p-services__image{
-	@include v.mq(lg){
-		position: absolute;
-		left: 0;
-		top: 40px;
-	}
+.p-services__image {
+  @include v.mq(lg) {
+    position: absolute;
+    left: 0;
+    top: 40px;
+  }
 }
 
 .p-services__text-content {
-	margin-top: 26px;
-	.c-section__title{
-		margin-top: 10px;
-	}
-	.c-section__desc{
-		margin-top: 15px;
-	}
-	@include v.mq(lg){
-		margin-top: 34px;
-		padding-bottom: 38px;
-		padding-left: 49%;
-		margin-right: unset;
-		margin-left: unset;
-		.c-section__title{
-			margin-top: 28px;
-		}
-
-	}
+  margin-top: 26px;
+  .c-section__title {
+    margin-top: 10px;
+  }
+  .c-section__desc {
+    margin-top: 15px;
+  }
+  @include v.mq(lg) {
+    margin-top: 34px;
+    padding-bottom: 38px;
+    padding-left: 49%;
+    margin-right: unset;
+    margin-left: unset;
+    .c-section__title {
+      margin-top: 28px;
+    }
+  }
 }

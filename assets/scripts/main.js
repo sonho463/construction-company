@@ -44,11 +44,12 @@ const removeClassAction = () => {
 
 window.addEventListener("scroll", () => {
   const offsetY = window.scrollY;
+	console.log(offsetY);
   if (offsetY > 120) {
     addClassAction();
   }
   if (offsetY > 400) {
-    header.classList.add("appear");
+		header.classList.add("appear");
   }
   if (offsetY < 400) {
     header.classList.remove("appear");
@@ -60,6 +61,7 @@ window.addEventListener("scroll", () => {
 
 // ハンバーガーメニューオープン
 const hamOpenAction=()=>{
+	document.body.style.overflow="hidden";
 	gNav.classList.add('ham-open');
 	gNavTextJa.forEach((ele)=>{
 		ele.classList.remove("js-color-black");
@@ -76,6 +78,8 @@ const hamOpenAction=()=>{
 
 }
 const hamCloseAction=()=>{
+	document.body.style.overflow="auto";
+
 	gNav.classList.remove('ham-open');
 	gNavTextJa.forEach((ele)=>{
 		ele.classList.add("js-color-black");
