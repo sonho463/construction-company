@@ -2,7 +2,7 @@
 const header = document.querySelector(".js-header");
 const headerLogo = document.querySelector(".js-header__logo");
 const headerLogoBlack = document.querySelector(".js-header__logo--b");
-const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector(".hamburger");
 const hamburgerLines = document.querySelectorAll(".hamburger__line");
 const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
 const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
@@ -44,12 +44,12 @@ const removeClassAction = () => {
 
 window.addEventListener("scroll", () => {
   const offsetY = window.scrollY;
-	console.log(offsetY);
+  console.log(offsetY);
   if (offsetY > 120) {
     addClassAction();
   }
   if (offsetY > 400) {
-		header.classList.add("appear");
+    header.classList.add("appear");
   }
   if (offsetY < 400) {
     header.classList.remove("appear");
@@ -60,51 +60,58 @@ window.addEventListener("scroll", () => {
 });
 
 // ハンバーガーメニューオープン
-const hamOpenAction=()=>{
-	document.body.style.overflow="hidden";
-	gNav.classList.add('ham-open');
-	gNavTextJa.forEach((ele)=>{
-		ele.classList.remove("js-color-black");
-	})
-	gNavTextEn.forEach((ele)=>{
-		ele.classList.remove("js-color-black");
-	})
-	headerLogo.classList.remove("display-none");
-	headerLogoBlack.classList.remove("display-block");
-	hamburger.classList.add('hamburger__open');
-	hamburgerLines.forEach((line) => {
-		line.classList.remove("hamburger__line--black");
-	});
+const hamOpenAction = () => {
+  document.body.style.overflow = "hidden";
+  gNav.classList.add("ham-open");
+  gNavTextJa.forEach((ele) => {
+    ele.classList.remove("js-color-black");
+  });
+  gNavTextEn.forEach((ele) => {
+    ele.classList.remove("js-color-black");
+  });
+  headerLogo.classList.remove("display-none");
+  headerLogoBlack.classList.remove("display-block");
+  hamburger.classList.add("hamburger__open");
+  hamburgerLines.forEach((line) => {
+    line.classList.remove("hamburger__line--black");
+  });
+};
+const hamCloseAction = () => {
+  document.body.style.overflow = "auto";
 
-}
-const hamCloseAction=()=>{
-	document.body.style.overflow="auto";
-
-	gNav.classList.remove('ham-open');
-	gNavTextJa.forEach((ele)=>{
-		ele.classList.add("js-color-black");
-	})
-	gNavTextEn.forEach((ele)=>{
-		ele.classList.add("js-color-black");
-	})
-	const offsetY = window.scrollY;
-if(offsetY!==0){
-	headerLogo.classList.add("display-none");
-	headerLogoBlack.classList.add("display-block");
-	hamburgerLines.forEach((line) => {
-		line.classList.add("hamburger__line--black");
-	});
-}
-	hamburger.classList.remove('hamburger__open');
-}
+  gNav.classList.remove("ham-open");
+  gNavTextJa.forEach((ele) => {
+    ele.classList.add("js-color-black");
+  });
+  gNavTextEn.forEach((ele) => {
+    ele.classList.add("js-color-black");
+  });
+  const offsetY = window.scrollY;
+  if (offsetY !== 0) {
+    headerLogo.classList.add("display-none");
+    headerLogoBlack.classList.add("display-block");
+    hamburgerLines.forEach((line) => {
+      line.classList.add("hamburger__line--black");
+    });
+  }
+  hamburger.classList.remove("hamburger__open");
+};
 
 const hamOpen = () => {
-	if(gNav.classList.contains('ham-open')){
-		hamCloseAction();
-	} else {
-		hamOpenAction();
-	}
+  if (gNav.classList.contains("ham-open")) {
+    hamCloseAction();
+  } else {
+    hamOpenAction();
+  }
 };
+
+// loading-animation
+
+window.onload = function(){
+	const loadingAnimation = document.querySelector(".c-loading-animation");
+	loadingAnimation.classList.add("loaded");
+}
+
 
 // Swiper.js
 const swiper = new Swiper(".swiper", {
