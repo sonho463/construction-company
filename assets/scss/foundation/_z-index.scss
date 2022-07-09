@@ -5,6 +5,7 @@
 }
 
 .l-main {
+	position: relative;
   z-index: 5;
 }
 
@@ -22,7 +23,7 @@
   z-index: 3;
 }
 
-.g-nav.ham-open {
+.l-header__gnav.ham-open {
   z-index: 2;
 }
 .hamburger {

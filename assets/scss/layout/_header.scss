@@ -1,38 +1,21 @@
 @use "../foundation/variables" as v;
 
 .l-header {
-  // position: fixed;
-  // position: sticky;
-  position: relative;
+  overflow: hidden;
+	position: relative;
+  padding: 15px 5.3%;
   width: 100%;
-  // top: 0;
+	height: 56px;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  padding: 15px 5.3%;
+	transition: transform 0.3s;
 	@include v.mq(lg){
 		padding: 15px 2.9%;
-	}
-  height: 56px;
-	@include v.mq(lg){
 		height: 80px;
 	}
-  transition: transform 0.3s;
 }
 
-.fixed {
-  position: fixed;
-  top: -56px;
-  transition: 0.3s;
-  background-color: v.$color-white;
-	@include v.mq(lg){
-		top: -80px;
-	}
-}
-.appear {
-	top: 0;
-  transition: 0.3s;
-}
 
 .l-header {
   &__inner {
@@ -56,7 +39,6 @@
 		display: none;
 	}
 }
-
 
 .hamburger {
   display: flex;
@@ -85,6 +67,95 @@
 		background-color: v.$color-black;
 	}
 }
+
+.l-header__gnav {
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 56px;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: v.$main-secondary;
+  @include v.mq(lg) {
+    position: static;
+    width: unset;
+    transform: translate(0);
+    margin-top: 20px;
+    padding-top: 0;
+    display: block;
+    margin-left: 6px;
+    background-color: unset;
+    height: 100%;
+  }
+}
+
+
+.l-header__gnav.ham-open{
+	position: fixed;
+  transition: transform 0.3s;
+  transform: translateX(0);
+}
+
+.l-header__gnav__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 76px;
+  padding-bottom: 100px;
+  height: 100vh;
+  width: 100%;
+  // align-items: center;
+  @include v.mq(lg) {
+    width: unset;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 22px;
+    flex-direction: row;
+  }
+}
+
+.l-header__gnav__item {
+  border-right: none;
+  transform: skew(-40deg);
+  padding: 0 18px;
+  & + .l-header__gnav__item {
+    margin-top: 30px;
+  }
+
+  @include v.mq(lg) {
+    &:not(:last-of-type) {
+      border-right: solid v.$color-white 1px;
+    }
+    & + .l-header__gnav__item {
+      margin-top: 0;
+    }
+  }
+}
+
+.l-header__gnav__item__link {
+  display: inline-block;
+  text-align: center;
+  transform: skew(40deg);
+}
+
+.l-header__gnav__text-ja {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: v.$color-white;
+}
+
+.l-header__gnav__text-en {
+  font-size: 1rem;
+  line-height: 1;
+  color: v.$color-white;
+}
+
+// ハンバーガーメニューオープンのスタイル
 
 .hamburger__open{
 	.hamburger__line{

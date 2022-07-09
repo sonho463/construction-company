@@ -4,11 +4,11 @@ const headerLogo = document.querySelector(".js-header__logo");
 const headerLogoBlack = document.querySelector(".js-header__logo--b");
 const hamburger = document.querySelector(".hamburger");
 const hamburgerLines = document.querySelectorAll(".hamburger__line");
-const gNavTextJa = document.querySelectorAll(".g-nav__text-ja");
-const gNavTextEn = document.querySelectorAll(".g-nav__text-en");
+const gNavTextJa = document.querySelectorAll(".l-header__gnav__text-ja");
+const gNavTextEn = document.querySelectorAll(".l-header__gnav__text-en");
 const gNavText = [gNavTextEn, gNavTextJa];
 const mv = document.querySelector(".js-mv");
-const gNav = document.querySelector(".g-nav");
+const gNav = document.querySelector(".l-header__gnav");
 
 // ヘッダーが現れるときのアクション
 const addClassAction = () => {
@@ -107,11 +107,10 @@ const hamOpen = () => {
 
 // loading-animation
 
-window.onload = function(){
-	const loadingAnimation = document.querySelector(".c-loading-animation");
-	loadingAnimation.classList.add("loaded");
-}
-
+window.onload = function () {
+  const loadingAnimation = document.querySelector(".c-loading-animation");
+  loadingAnimation.classList.add("loaded");
+};
 
 // Swiper.js
 const swiper = new Swiper(".swiper", {
