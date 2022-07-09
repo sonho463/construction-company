@@ -534,6 +534,7 @@ a:hover img {
   .l-header {
     padding: 15px 2.9%;
     height: 80px;
+    justify-content: flex-start;
   }
 }
 
@@ -1602,8 +1603,8 @@ a:hover img {
 }
 
 .p-recruit {
-  margin-top: 48px;
   padding-top: 56px;
+  margin-top: 48px;
 }
 @media screen and (min-width:1024px) {
   .p-recruit {

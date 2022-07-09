@@ -13,6 +13,7 @@
 	@include v.mq(lg){
 		padding: 15px 2.9%;
 		height: 80px;
+		justify-content: flex-start;
 	}
 }
 
@@ -155,6 +156,10 @@
 }
 
 // ハンバーガーメニューオープンのスタイル
+.l-header.l-header--open{
+	
+}
+
 
 .hamburger__open{
 	.hamburger__line{

@@ -1,8 +1,8 @@
 @use "../foundation/variables" as v;
 
 .p-recruit {
-  margin-top: calc(104px - 56px);
 	padding-top: 56px;
+  margin-top: calc(104px - 56px);
   @include v.mq(lg) {
 		margin-top: calc(158px - 80px);
     padding-top: calc(75px + 80px);

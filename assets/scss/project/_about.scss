@@ -3,38 +3,38 @@
 .p-about {
   position: relative;
   margin-top: calc(120px - 56px);
-	padding-top: 56px;
-	@include v.mq(lg){
-		margin-top: calc(50px + 160px - 100px);
-		padding-top: 100px;
-	}
+  padding-top: 56px;
+  @include v.mq(lg) {
+    margin-top: calc(50px + 160px - 100px);
+    padding-top: 100px;
+  }
   .c-button {
     margin-top: 27px;
-		@include v.mq(lg){
-			margin-top: 38px;
-			margin-left: unset;
-		}
+    @include v.mq(lg) {
+      margin-top: 38px;
+      margin-left: unset;
+    }
   }
-	.c-button__text{
-		margin-right: 27px;
-		letter-spacing: -.15em;
-		@include v.mq(lg){
-			margin-right: 16px;
-			letter-spacing: 0em;
-		}
-	}
+  .c-button__text {
+    margin-right: 27px;
+    letter-spacing: -0.15em;
+    @include v.mq(lg) {
+      margin-right: 16px;
+      letter-spacing: 0em;
+    }
+  }
 }
 
-.p-about__text-content{
-	.c-section__heading-block{
-		margin-top: 26px;
-	}
-	.c-section__desc{
-		margin-top: 11px;
-		@include v.mq(lg){
-			margin-top: 24px;
-		}
-	}
+.p-about__text-content {
+  .c-section__heading-block {
+    margin-top: 26px;
+  }
+  .c-section__desc {
+    margin-top: 11px;
+    @include v.mq(lg) {
+      margin-top: 24px;
+    }
+  }
 }
 
 @include v.mq(lg) {
@@ -53,10 +53,10 @@
   }
 }
 
-.p-about__bottom-image{
-	display: none;
-	@include v.mq(lg){
-		display: block;
-		margin-top: 32px;
-	}
+.p-about__bottom-image {
+  display: none;
+  @include v.mq(lg) {
+    display: block;
+    margin-top: 32px;
+  }
 }

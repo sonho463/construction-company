@@ -80,14 +80,14 @@ const hamCloseAction = () => {
   document.body.style.overflow = "auto";
 
   gNav.classList.remove("ham-open");
-  gNavTextJa.forEach((ele) => {
-    ele.classList.add("js-color-black");
-  });
-  gNavTextEn.forEach((ele) => {
-    ele.classList.add("js-color-black");
-  });
   const offsetY = window.scrollY;
-  if (offsetY !== 0) {
+  if (offsetY !== 0) {gNavTextJa.forEach((ele) => {
+			ele.classList.add("js-color-black");
+		});
+		gNavTextEn
+		.forEach((ele) => {
+			ele.classList.add("js-color-black");
+		});
     headerLogo.classList.add("display-none");
     headerLogoBlack.classList.add("display-block");
     hamburgerLines.forEach((line) => {

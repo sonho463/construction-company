@@ -63,18 +63,18 @@
     margin-bottom: 0;
     justify-content: center;
     gap: 16px;
-		font-size: 1.6rem;
+    font-size: 1.6rem;
   }
   &::before {
     content: "";
     background-size: contain;
     height: 12px;
-		@include v.mq(lg){
-			background-size: 100%;
-			background-repeat: no-repeat;
-			height: 18px;
-			width:auto;
-		}
+    @include v.mq(lg) {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 18px;
+      width: auto;
+    }
   }
   &::after {
     content: "";
@@ -96,9 +96,9 @@
       &::before {
         background-image: url(../images/SP-assets/Backhoe.svg);
         width: 16px;
-				@include v.mq(lg){
-				width: 24px;
-				}
+        @include v.mq(lg) {
+          width: 24px;
+        }
       }
     }
   }
@@ -108,9 +108,9 @@
       &::before {
         background-image: url(../images/SP-assets/Factory.svg);
         width: 14px;
-				@include v.mq(lg){
-				width: 20px;
-				}
+        @include v.mq(lg) {
+          width: 20px;
+        }
       }
     }
   }
