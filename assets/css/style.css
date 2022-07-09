@@ -520,7 +520,7 @@ a:hover img {
 }
 
 .l-header {
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   padding: 15px 5.3%;
   width: 100%;
@@ -599,7 +599,6 @@ a:hover img {
   width: 100%;
   overflow-x: hidden;
   padding-top: 56px;
-  position: absolute;
   display: block;
   top: 0;
   left: 0;
@@ -610,7 +609,7 @@ a:hover img {
   .l-header__gnav {
     position: static;
     width: unset;
-    transform: translate(0);
+    transform: translateX(0);
     margin-top: 20px;
     padding-top: 0;
     display: block;

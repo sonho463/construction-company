@@ -12,7 +12,7 @@ const gNav = document.querySelector(".l-header__gnav");
 
 // ヘッダーが現れるときのアクション
 const addClassAction = () => {
-  header.classList.add("fixed");
+  // header.classList.add("fixed");
   headerLogo.classList.add("display-none");
   headerLogoBlack.classList.add("display-block");
   hamburgerLines.forEach((line) => {
@@ -29,7 +29,7 @@ const addClassAction = () => {
 // ヘッダーが消えるときのアクション
 const removeClassAction = () => {
   gNavText.forEach((ele) => {
-    header.classList.remove("fixed");
+    // header.classList.remove("fixed");
     headerLogo.classList.remove("display-none");
     headerLogoBlack.classList.remove("display-block");
     hamburgerLines.forEach((line) => {
