@@ -2,43 +2,42 @@
 
 .l-header {
   overflow-x: hidden;
-	position: relative;
+  position: relative;
   padding: 15px 5.3%;
   width: 100%;
-	height: 56px;
+  height: 56px;
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-	transition: transform 0.3s;
-	@include v.mq(lg){
-		padding: 15px 2.9%;
-		height: 80px;
-		justify-content: flex-start;
-	}
+  transition: opacity 0.3s;
+  @include v.mq(lg) {
+    padding: 15px 2.9%;
+    height: 80px;
+    justify-content: flex-start;
+  }
 }
-
 
 .l-header {
   &__inner {
     display: flex;
     width: 100%;
     justify-content: space-between;
-		align-items: center;
-		@include v.mq(lg){
-			justify-content: flex-start;
-			align-items: center;
-		}
+    align-items: center;
+    @include v.mq(lg) {
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
   &__logo {
     width: 38%;
-		height: 29px;
-		@include v.mq(lg){
-			width: unset;
-		}
+    height: 29px;
+    @include v.mq(lg) {
+      width: unset;
+    }
   }
-	&__logo-img--b{
-		display: none;
-	}
+  &__logo-img--b {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -47,9 +46,9 @@
   align-items: center;
   justify-content: center;
   width: 22px;
-	@include v.mq(lg){
-		display: none;
-	}
+  @include v.mq(lg) {
+    display: none;
+  }
   &__line {
     display: block;
     width: 90%;
@@ -57,24 +56,28 @@
     background-color: v.$color-white;
     &:first-of-type {
       transform: translateY(-5px);
-			transition: transform .3s;
+      transition: transform 0.3s;
     }
     &:last-of-type {
-			transform: translateY(5px);
-			transition: transform .3s;
+      transform: translateY(5px);
+      transition: transform 0.3s;
     }
   }
-	&__line--black{
-		background-color: v.$color-black;
-	}
+  &__line--black {
+    background-color: v.$color-black;
+  }
 }
 
 .l-header__gnav {
   position: fixed;
   transform: translateX(100%);
+  overflow-x: hidden;
+  // z-index: -1;
+  // visibility: hidden;
+  // opacity: 0;
+  // transition: opacity 0.3s	;
   transition: transform 0.3s;
   width: 100%;
-  overflow-x: hidden;
   padding-top: 56px;
   display: block;
   top: 0;
@@ -84,7 +87,7 @@
   @include v.mq(lg) {
     position: static;
     width: unset;
-    transform: translateX(0);
+    transform: unset;
     margin-top: 20px;
     padding-top: 0;
     display: block;
@@ -92,13 +95,6 @@
     background-color: unset;
     height: 100%;
   }
-}
-
-
-.l-header__gnav.ham-open{
-	position: fixed;
-  transition: transform 0.3s;
-  transform: translateX(0);
 }
 
 .l-header__gnav__list {
@@ -156,21 +152,99 @@
 }
 
 // ハンバーガーメニューオープンのスタイル
-.l-header.l-header--open{
-	
-}
-
-
-.hamburger__open{
-	.hamburger__line{
-		&:first-of-type {
+.l-header.l-header--open {
+  .l-header__gnav {
+    position: fixed;
+    // z-index: 1;
+    // opacity: 1;
+    // transition: opacity 0.3s;
+    transition: transform 0.3s;
+    // visibility: visible;
+    transform: translateX(0);
+  }
+  .hamburger__line {
+    &:first-of-type {
       transform: translateY(1px) rotate(315deg);
     }
-		&:nth-of-type(2){
-			display: none;
-		}
+    &:nth-of-type(2) {
+      display: none;
+    }
     &:last-of-type {
       transform: translateY(-1px) rotate(-315deg);
     }
-	}
+  }
+}
+
+// クローンヘッダー
+
+.l-header--clone {
+  position: fixed;
+  overflow-x: hidden;
+  top: -56px;
+  transition: top 0.3s;
+  visibility: hidden;
+  background-color: v.$color-white;
+  z-index: 300;
+  @include v.mq(lg) {
+    .l-header__gnav {
+      display: flex;
+      align-items: center;
+    }
+    .l-header__gnav__item {
+      border-color: v.$color-black;
+    }
+  }
+}
+
+.l-header--clone.clone-open {
+  top: 0;
+  transition: top 0.3s;
+  visibility: visible;
+  .l-header__logo-img {
+    display: none;
+  }
+  .l-header__logo-img--b {
+    display: block;
+  }
+  span.hamburger__line {
+    background: v.$color-black;
+  }
+  .l-header__gnav {
+    margin-top: 0;
+  }
+  @include v.mq(lg) {
+    .l-header__gnav__text-ja {
+      color: v.$color-black;
+    }
+
+    .l-header__gnav__text-en {
+      color: v.$color-black;
+    }
+  }
+}
+
+.l-header--clone.clone-menu-open {
+  background-color: transparent;
+  .l-header__logo-img {
+    display: block;
+  }
+  .l-header__logo-img--b {
+    display: none;
+  }
+  span.hamburger__line {
+    background-color: v.$color-white;
+    &:first-of-type {
+      transform: translateY(1px) rotate(315deg);
+    }
+    &:nth-of-type(2) {
+      display: none;
+    }
+    &:last-of-type {
+      transform: translateY(-1px) rotate(-315deg);
+    }
+  }
+  .l-header__gnav--clone {
+    position: fixed;
+    transform: translateX(0);
+  }
 }

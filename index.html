@@ -5,6 +5,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<meta name="description" content="私達のモットーは、 「社会基盤から世界をより良くする」こと。そのために最前線で国家規模のプロジェクトに参画することもあれば、世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も同時に行うことで、業界の進化の促進を担っています。">
 	<!-- GoogleFonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +16,8 @@
 	<!-- swiper.js -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- メインスタイルシート -->
 	<link rel="stylesheet" href="./assets/css/style.css">
 
@@ -36,13 +39,67 @@
 
 
 	</div>
-	<header class="l-header js-header">
+	<div class="l-header l-header--clone">
 		<div class="l-header__inner">
-			<h1 class="l-header__logo">
+			<a href="/#" class="l-header__logo">
 				<img src="./assets/images/logos-sonozakigumi/logo-w.svg" alt="" class="l-header__logo-img js-header__logo">
 				<img src="./assets/images/logos-sonozakigumi/logo-b.svg" alt=""
 					class="l-header__logo-img l-header__logo-img--b js-header__logo--b">
-			</h1>
+			</a>
+			<nav class="l-header__gnav l-header__gnav--clone">
+				<ul class="l-header__gnav__list">
+					<li class="l-header__gnav__item">
+						<a href="/#" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">トップ</p>
+							<p class="l-header__gnav__text-en">TOP</p>
+						</a>
+					</li>
+					<li class="l-header__gnav__item">
+						<a href="/#services" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">事業内容</p>
+							<p class="l-header__gnav__text-en">SERVICES</p>
+						</a>
+					</li>
+					<li class="l-header__gnav__item">
+						<a href="/#about" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">園崎組について</p>
+							<p class="l-header__gnav__text-en">ABOUT</p>
+						</a>
+					</li>
+					<li class="l-header__gnav__item">
+						<a href="/#works" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">園崎組の実績</p>
+							<p class="l-header__gnav__text-en">WORKS</p>
+						</a>
+					</li>
+					<li class="l-header__gnav__item">
+						<a href="/#recruit" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">採用情報</p>
+							<p class="l-header__gnav__text-en">RECRUIT</p>
+						</a>
+					</li>
+					<li class="l-header__gnav__item">
+						<a href="/#contact" onclick="cloneMenuCloseAction()" class="l-header__gnav__item__link">
+							<p class="l-header__gnav__text-ja">お問い合わせ</p>
+							<p class="l-header__gnav__text-en">CONTACT</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<button type="button" onclick="cloneMenuOpen()" class="hamburger">
+			<span class="hamburger__line"></span>
+			<span class="hamburger__line"></span>
+			<span class="hamburger__line"></span>
+		</button>
+	</div>
+	<header class="l-header js-header">
+		<div class="l-header__inner">
+			<a href="/#" class="l-header__logo">
+				<img src="./assets/images/logos-sonozakigumi/logo-w.svg" alt="" class="l-header__logo-img js-header__logo">
+				<img src="./assets/images/logos-sonozakigumi/logo-b.svg" alt=""
+					class="l-header__logo-img l-header__logo-img--b js-header__logo--b">
+			</a>
 			<nav class="l-header__gnav">
 				<ul class="l-header__gnav__list">
 					<li class="l-header__gnav__item">
@@ -149,7 +206,8 @@
 		</section>
 		<section id="services" class="p-services">
 			<div class="p-services__content">
-				<figure class="p-services__image">
+
+				<figure class="p-services__image" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
 					<picture>
 						<source media="(min-width: 1024px)" srcset="./assets/images/PC-assets/image-services.jpg">
 						<img src="./assets/images/SP-assets/image-services.jpg" alt="園崎組サービスのイメージ画像">
@@ -188,7 +246,7 @@
 							<img src="./assets/images/SP-assets/image-about.jpg" alt="園崎組サービスのイメージ画像">
 						</picture>
 					</figure>
-					<div class="p-about__text-content">
+					<div class="p-about__text-content" data-aos="fade-left">
 						<div class="c-section__heading-block">
 							<h2 class="c-section__en-heading">ABOUT</h2>
 							<!-- ABOU→ABOUT修正 -->
@@ -234,7 +292,7 @@
 				</div>
 				<div class="p-works__article-block">
 					<ul class="p-works__list">
-						<li class="p-works__item">
+						<li class="p-works__item" data-aos="flip-right">
 							<div class="p-works__image-ballet">
 								<!-- ::afterでナンバータグ -->
 								<span class="p-works__number">01</span>
@@ -244,7 +302,7 @@
 								<p class="p-works__item__desc">東南アジア某国での国家規模のプロジェクトに参画した際の園崎組のプロジェクトストーリーを記載しています。</p>
 							</div>
 						</li>
-						<li class="p-works__item">
+						<li class="p-works__item" data-aos="flip-right">
 							<div class="p-works__image-ballet">
 								<!-- ::afterでナンバータグ -->
 								<span class="p-works__number">02</span>
@@ -273,17 +331,17 @@
 					<p class="c-section__ja-heading">採用情報</p>
 				</div>
 				<ul class="p-recruit__menu-list">
-					<li class="p-recruit__item">
+					<li class="p-recruit__item" data-aos="fade-up">
 						<a href="#" class="p-recruit__item__link">
 							<h3 class="p-recruit__item__heading">園崎組を知る</h3>
 						</a>
 					</li>
-					<li class="p-recruit__item">
+					<li class="p-recruit__item" data-aos="fade-up">
 						<a href="#" class="p-recruit__item__link">
 							<h3 class="p-recruit__item__heading">園崎組の一日</h3>
 						</a>
 					</li>
-					<li class="p-recruit__item">
+					<li class="p-recruit__item" data-aos="fade-up">
 						<a href="#" class="p-recruit__item__link">
 							<h3 class="p-recruit__item__heading">求める人物像</h3>
 						</a>
@@ -326,24 +384,24 @@
 		<div class="l-footer__menu__outer">
 			<ul class="l-footer__menu">
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">トップ</p>
+					<a href="/#" class="l-footer__item__text">トップ</p>
 				</li>
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">事業内容</p>
+					<a href="/#services" class="l-footer__item__text">事業内容</p>
 				</li>
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">園崎組について</p>
+					<a href="/#about" class="l-footer__item__text">園崎組について</p>
 				</li>
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">園崎組の実績</p>
+					<a href="/#works" class="l-footer__item__text">園崎組の実績</p>
 				</li>
 			</ul>
 			<ul class="l-footer__menu">
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">採用</a>
+					<a href="/#recruit" class="l-footer__item__text">採用</a>
 				</li>
 				<li class="l-footer__item">
-					<a href="#" class="l-footer__item__text">お問い合わせ</a>
+					<a href="/#contact" class="l-footer__item__text">お問い合わせ</a>
 				</li>
 			</ul>
 		</div>
@@ -363,9 +421,16 @@
 
 	</footer>
 
+
+
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<!-- AOS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 	<!-- メインのJavaScript -->
 	<script src="./assets/scripts/main.js"></script>
 
