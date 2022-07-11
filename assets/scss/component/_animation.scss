@@ -36,6 +36,11 @@
 	)
 }
 
+.js-animate-image{
+	opacity: 0;
+	transform: translateY(100%);
+}
+
 .slideLeft{
 	@include v.animation(
 		$name: slideLeft

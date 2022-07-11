@@ -26,26 +26,37 @@ const headerObserver = new IntersectionObserver((entries) => {
     }
   });
 }, options);
+headerObserver.observe(mv);
 
-const elementObserver = new IntersectionObserver((entries) => {
+// タイトルアニメーション
+const titleObserver = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
-    if (e.isIntersecting) {
+    if (e.isIntersecting && !e.target.classList.contains('slideLeft')) {
       console.log(e.target);
       e.target.classList.add("slideLeft");
     }
-    if (!e.isIntersecting && e.target.classList.contains('slideLeft')) {
-      e.target.classList.remove("slideLeft");
-    }
   });
 });
-
 const animateTitles = document.querySelectorAll('.c-section__heading-block');
 animateTitles.forEach((t)=>{
-	elementObserver.observe(t);
+	titleObserver.observe(t);
 })
 
-// elementObserver.observe(animateTitles);
-headerObserver.observe(mv);
+// 画像のアニメーション
+const imageObserver = new IntersectionObserver((entries)=>{
+	entries.forEach((e)=>{
+		if (e.isIntersecting && !e.target.classList.contains('fadeUp')) {
+      console.log(e.target);
+      e.target.classList.add("fadeUp");
+    }
+	})
+})
+const animateImages = document.querySelectorAll('.js-animate-image');
+animateImages.forEach((t)=>{
+	console.log(t.target);
+	imageObserver.observe(t);
+})
+
 
 // ハンバーガーメニューオープン
 const hamOpenAction = () => {

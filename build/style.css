@@ -451,7 +451,6 @@ template {
 *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid pink;
 }
 
 html {
@@ -1040,7 +1039,7 @@ a:hover img {
 }
 .c-button::after {
   content: "";
-  background-image: url(../images/arrow.png);
+  background-image: url(../assets/images/arrow.png);
   background-size: contain;
   width: 18px;
   height: 6px;
@@ -1145,6 +1144,12 @@ a:hover img {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.js-animate-image {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .slideLeft {
@@ -1333,7 +1338,8 @@ a:hover img {
   position: relative;
   padding-top: 56px;
   top: -56px;
-  background-image: -ms-linear-gradient(0deg, rgb(75, 108, 183) 0%, rgb(24, 40, 72) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(75, 108, 183)), to(rgb(24, 40, 72)));
+  background: linear-gradient(0deg, rgb(75, 108, 183) 0%, rgb(24, 40, 72) 100%);
   color: #fff;
 }
 @media screen and (min-width:1024px) {
@@ -1362,27 +1368,27 @@ a:hover img {
   z-index: 1;
 }
 .p-mv__bg-image-1 {
-  background-image: url(../images/SP-assets/top-image-1.png);
+  background-image: url(../assets/images/SP-assets/top-image-1.png);
 }
 @media screen and (min-width:1024px) {
   .p-mv__bg-image-1 {
-    background-image: url(../images/PC-assets/top-image-1.png);
+    background-image: url(../assets/images/PC-assets/top-image-1.png);
   }
 }
 .p-mv__bg-image-2 {
-  background-image: url(../images/SP-assets/top-image-2.png);
+  background-image: url(../assets/images/SP-assets/top-image-2.png);
 }
 @media screen and (min-width:1024px) {
   .p-mv__bg-image-2 {
-    background-image: url(../images/PC-assets/top-image-2.png);
+    background-image: url(../assets/images/PC-assets/top-image-2.png);
   }
 }
 .p-mv__bg-image-3 {
-  background-image: url(../images/SP-assets/top-image-3.png);
+  background-image: url(../assets/images/SP-assets/top-image-3.png);
 }
 @media screen and (min-width:1024px) {
   .p-mv__bg-image-3 {
-    background-image: url(../images/PC-assets/top-image-3.png);
+    background-image: url(../assets/images/PC-assets/top-image-3.png);
   }
 }
 .p-mv__bg--gradient {
@@ -1632,7 +1638,7 @@ a:hover img {
     background-color: #182848;
     -webkit-clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
             clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
-    background-image: url(../images/arrow.png);
+    background-image: url(../assets/images/arrow.png);
     background-size: 16px 4px;
     background-repeat: no-repeat;
     background-position: 72px center;
@@ -1936,11 +1942,11 @@ a:hover img {
   }
 }
 .p-works__item:first-of-type .p-works__image-ballet {
-  background-image: url(../images/Sp-assets/image-works01.jpg);
+  background-image: url(../assets/images/SP-assets/image-works-1.jpg);
 }
 @media screen and (min-width:1024px) {
   .p-works__item:first-of-type .p-works__image-ballet {
-    background-image: url(../images/PC-assets/image-works-1.jpg);
+    background-image: url(../assets/images/PC-assets/image-works-1.jpg);
   }
 }
 .p-works__item:last-of-type {
@@ -1952,11 +1958,11 @@ a:hover img {
   }
 }
 .p-works__item:last-of-type .p-works__image-ballet {
-  background-image: url(../images/Sp-assets/image-works02.jpg);
+  background-image: url(../assets/images/SP-assets/image-works-2.jpg);
 }
 @media screen and (min-width:1024px) {
   .p-works__item:last-of-type .p-works__image-ballet {
-    background-image: url(../images/PC-assets/image-works-2.jpg);
+    background-image: url(../assets/images/PC-assets/image-works-2.jpg);
   }
 }
 
@@ -2056,29 +2062,29 @@ a:hover img {
   }
 }
 .p-recruit__item:first-of-type {
-  background-image: url(../images/SP-assets/image-recruit-1.jpg);
+  background-image: url(../assets/images/SP-assets/image-recruit-1.jpg);
 }
 @media screen and (min-width:1024px) {
   .p-recruit__item:first-of-type {
-    background-image: url(../images/PC-assets/image-recruit-1.jpg);
+    background-image: url(../assets/images/PC-assets/image-recruit-1.jpg);
     margin-top: 80px;
   }
 }
 .p-recruit__item:nth-of-type(2) {
-  background-image: url(../images/SP-assets/image-recruit-2.jpg);
+  background-image: url(../assets/images/SP-assets/image-recruit-2.jpg);
 }
 @media screen and (min-width:1024px) {
   .p-recruit__item:nth-of-type(2) {
-    background-image: url(../images/PC-assets/image-recruit-2.jpg);
+    background-image: url(../assets/images/PC-assets/image-recruit-2.jpg);
     margin-top: 40px;
   }
 }
 .p-recruit__item:nth-of-type(3) {
-  background-image: url(../images/SP-assets/image-recruit-3.jpg);
+  background-image: url(../assets/images/SP-assets/image-recruit-3.jpg);
 }
 @media screen and (min-width:1024px) {
   .p-recruit__item:nth-of-type(3) {
-    background-image: url(../images/PC-assets/image-recruit-3.jpg);
+    background-image: url(../assets/images/PC-assets/image-recruit-3.jpg);
   }
 }
 .p-recruit__item__heading {
@@ -2112,7 +2118,7 @@ a:hover img {
   .p-recruit__item__heading::after {
     content: "";
     display: block;
-    background-image: url(../images/arrow.png);
+    background-image: url(../assets/images/arrow.png);
     background-size: cover;
     width: 16px;
     height: 5px;
@@ -2123,7 +2129,7 @@ a:hover img {
   margin-top: 62px;
   padding-top: 138px;
   padding-bottom: 70px;
-  background-image: url(../images/SP-assets/background-image-contact.jpg);
+  background-image: url(../assets/images/SP-assets/background-image-contact.jpg);
   background-size: cover;
 }
 @media screen and (min-width:1024px) {
@@ -2131,7 +2137,7 @@ a:hover img {
     margin-top: -80px;
     padding-top: 153px;
     padding-bottom: 80px;
-    background-image: url(../images/PC-assets/background-image-contact.jpg);
+    background-image: url(../assets/images/PC-assets/background-image-contact.jpg);
   }
   .p-contact .c-section__heading-block {
     -webkit-box-pack: center;
@@ -2216,7 +2222,7 @@ a:hover img {
 }
 .p-contact__link::after {
   content: "";
-  background-image: url(../images/arrow.png);
+  background-image: url(../assets/images/arrow.png);
   background-size: contain;
   width: 18px;
   height: 6px;
@@ -2232,7 +2238,7 @@ a:hover img {
   background-color: #b8614b;
 }
 .p-contact__item:first-of-type .p-contact__link::before {
-  background-image: url(../images/SP-assets/Backhoe.svg);
+  background-image: url(../assets/images/SP-assets/Backhoe.svg);
   width: 16px;
 }
 @media screen and (min-width:1024px) {
@@ -2244,7 +2250,7 @@ a:hover img {
   background-color: #191919;
 }
 .p-contact__item:last-of-type .p-contact__link::before {
-  background-image: url(../images/SP-assets/Factory.svg);
+  background-image: url(../assets/images/SP-assets/Factory.svg);
   width: 14px;
 }
 @media screen and (min-width:1024px) {

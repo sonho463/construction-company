@@ -4,17 +4,7 @@
   position: relative;
   padding-top: 56px;
   top: -56px;
-  background-image: -moz-linear-gradient(
-    0deg,
-    rgb(75, 108, 183) 0%,
-    rgb(24, 40, 72) 100%
-  );
-  background-image: -webkit-linear-gradient(
-    0deg,
-    rgb(75, 108, 183) 0%,
-    rgb(24, 40, 72) 100%
-  );
-  background-image: -ms-linear-gradient(
+  background: linear-gradient(
     0deg,
     rgb(75, 108, 183) 0%,
     rgb(24, 40, 72) 100%
@@ -55,22 +45,22 @@
 
 .p-mv__bg {
   &-image-1 {
-		background-image: url(../images/SP-assets/top-image-1.png);
-		@include v.mq(lg){
-			background-image: url(../images/PC-assets/top-image-1.png);
-		}
+    background-image: url(../assets/images/SP-assets/top-image-1.png);
+    @include v.mq(lg) {
+      background-image: url(../assets/images/PC-assets/top-image-1.png);
+    }
   }
   &-image-2 {
-		background-image: url(../images/SP-assets/top-image-2.png);
-		@include v.mq(lg){
-			background-image: url(../images/PC-assets/top-image-2.png);
-		}
+    background-image: url(../assets/images/SP-assets/top-image-2.png);
+    @include v.mq(lg) {
+      background-image: url(../assets/images/PC-assets/top-image-2.png);
+    }
   }
   &-image-3 {
-		background-image: url(../images/SP-assets/top-image-3.png);
-		@include v.mq(lg){
-			background-image: url(../images/PC-assets/top-image-3.png);
-		}
+    background-image: url(../assets/images/SP-assets/top-image-3.png);
+    @include v.mq(lg) {
+      background-image: url(../assets/images/PC-assets/top-image-3.png);
+    }
   }
   height: 611px;
   width: 100%;
@@ -94,27 +84,25 @@
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-
 }
 
 .swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img
-,.swiper-slide-prev .slide-img
-{
-	/* 12秒かけて拡大させる */
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+  /* 12秒かけて拡大させる */
   -webkit-animation: zoomUp 12s linear 0s;
   animation: zoomUp 12s linear 0s;
   -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
-	transform-origin: center center;
+  transform-origin: center center;
 }
-.swiper-slide-prev .slide-img{
-	margin: 25px;
-	transition: 2s;
+.swiper-slide-prev .slide-img {
+  margin: 25px;
+  transition: 2s;
 }
 
 .slide-img {
-	// overflow: hidden;
+  // overflow: hidden;
   width: inherit;
   height: inherit;
   position: inherit;
@@ -127,13 +115,13 @@
   position: relative;
   z-index: 5;
   // position: relative;
-  // background-image: url(../images/SP-assets/top-image-1.png);
+  // background-image: url(../assets/images/SP-assets/top-image-1.png);
   // background-size: cover;
   height: 611px;
   padding: 100px 5.1% 0;
   @include v.mq(lg) {
     height: 688px;
-    // background-image: url(../images/PC-assets/top-image-1.png);
+    // background-image: url(../assets/images/PC-assets/top-image-1.png);
     padding: 98px 13% 0;
   }
 }
@@ -277,7 +265,7 @@
       color: v.$color-white;
       background-color: v.$main-primary;
       clip-path: polygon(100% 0, 45% 0, 0 100%, 100% 100%);
-      background-image: url(../images/arrow.png);
+      background-image: url(../assets/images/arrow.png);
       background-size: 16px 4px;
       background-repeat: no-repeat;
       background-position: 72px center;

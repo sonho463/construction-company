@@ -4,13 +4,13 @@
   margin-top: calc(118px - 56px);
   padding-top: calc(82px + 56px);
   padding-bottom: 70px;
-  background-image: url(../images/SP-assets/background-image-contact.jpg);
+  background-image: url(../assets/images/SP-assets/background-image-contact.jpg);
   background-size: cover;
   @include v.mq(lg) {
     margin-top: -80px;
     padding-top: calc(73px + 80px);
     padding-bottom: 80px;
-    background-image: url(../images/PC-assets/background-image-contact.jpg);
+    background-image: url(../assets/images/PC-assets/background-image-contact.jpg);
     .c-section__heading-block {
       justify-content: center;
     }
@@ -78,7 +78,7 @@
   }
   &::after {
     content: "";
-    background-image: url(../images/arrow.png);
+    background-image: url(../assets/images/arrow.png);
     background-size: contain;
     width: 18px;
     height: 6px;
@@ -94,7 +94,7 @@
     .p-contact__link {
       background-color: #b8614b;
       &::before {
-        background-image: url(../images/SP-assets/Backhoe.svg);
+        background-image: url(../assets/images/SP-assets/Backhoe.svg);
         width: 16px;
         @include v.mq(lg) {
           width: 24px;
@@ -106,7 +106,7 @@
     .p-contact__link {
       background-color: #191919;
       &::before {
-        background-image: url(../images/SP-assets/Factory.svg);
+        background-image: url(../assets/images/SP-assets/Factory.svg);
         width: 14px;
         @include v.mq(lg) {
           width: 20px;
