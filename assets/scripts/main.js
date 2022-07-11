@@ -16,7 +16,7 @@ const options = {
   rootMargin: "80%",
   threshold: 1.0,
 };
-const observer = new IntersectionObserver((entries) => {
+const headerObserver = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (!e.isIntersecting) {
       headerClone.classList.add("clone-open");
@@ -26,8 +26,26 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, options);
-observer.observe(mv);
 
+const elementObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      console.log(e.target);
+      e.target.classList.add("slideLeft");
+    }
+    if (!e.isIntersecting && e.target.classList.contains('slideLeft')) {
+      e.target.classList.remove("slideLeft");
+    }
+  });
+});
+
+const animateTitles = document.querySelectorAll('.c-section__heading-block');
+animateTitles.forEach((t)=>{
+	elementObserver.observe(t);
+})
+
+// elementObserver.observe(animateTitles);
+headerObserver.observe(mv);
 
 // ハンバーガーメニューオープン
 const hamOpenAction = () => {
@@ -72,12 +90,12 @@ const ro = new ResizeObserver((entries) => {
     let w = entry.contentRect.width;
     console.log(w);
     if (w > 1028) {
-			if(headerClone.classList.contains('clone-menu-open')){
-				cloneMenuCloseAction();
-			}
-			if(header.classList.contains('l-header--open')){
-				hamCloseAction();
-			}
+      if (headerClone.classList.contains("clone-menu-open")) {
+        cloneMenuCloseAction();
+      }
+      if (header.classList.contains("l-header--open")) {
+        hamCloseAction();
+      }
     }
   }
 });

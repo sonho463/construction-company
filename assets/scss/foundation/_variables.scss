@@ -28,11 +28,13 @@ $breakpoints: (
 @mixin animation(
 	$name: '',
 	$delay:0,
-	$duration: 0.3s,
+	$duration: 0.5s,
 	$timing: ease,
+	$animation-fill-mode: forwards,
 ) {
 	animation-name: $name;
 	animation-delay: $delay;
 	animation-duration: $duration;
 	animation-timing-function: $timing;
+	animation-fill-mode: $animation-fill-mode;
 }

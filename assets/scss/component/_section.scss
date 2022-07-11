@@ -4,6 +4,8 @@
   &__heading-block {
     display: flex;
     align-items: baseline;
+		opacity: 0;
+		transform: translateX(-100%);
   }
   &__en-heading {
     // margin: 0 9px 31px 0;

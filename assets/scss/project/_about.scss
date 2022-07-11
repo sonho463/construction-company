@@ -37,6 +37,11 @@
   }
 }
 
+.p-about__bg-image{
+	// opacity: 0;
+	// transform: translateY(100%);
+}
+
 @include v.mq(lg) {
   .p-about__bg-image {
     margin-right: calc(50% - 50vw);

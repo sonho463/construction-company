@@ -443,6 +443,7 @@ template {
 *:before,
 *:after {
   box-sizing: border-box;
+  outline: 1px solid pink;
 }
 
 html {
@@ -866,6 +867,8 @@ a:hover img {
 .c-section__heading-block {
   display: flex;
   align-items: baseline;
+  opacity: 0;
+  transform: translateX(-100%);
 }
 .c-section__en-heading {
   font-family: Lato;
@@ -984,6 +987,42 @@ a:hover img {
     transform: scale(1.2);
   }
 }
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeUp {
+  animation-name: fadeUp;
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.slideLeft {
+  animation-name: slideLeft;
+  animation-delay: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
 .c-loading-animation {
   background-color: #182848;
   width: 100vw;
