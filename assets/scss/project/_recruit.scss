@@ -18,6 +18,7 @@
     @include v.mq(lg) {
       margin-top: 62px;
       width: 18.5%;
+			min-width: 256px;
     }
   }
   .c-button__text {
@@ -45,6 +46,13 @@
   background-repeat: no-repeat;
   height: 200px;
   padding: 168px 0 16px 21px;
+	@include v.mq(md){
+		height: 300px;
+		padding-top: 260px;
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+	}
   @include v.mq(lg) {
     width: 22.8%;
     width: 312px;
@@ -61,6 +69,9 @@
   }
   &:nth-of-type(2) {
     background-image: url(../assets/images/SP-assets/image-recruit-2.jpg);
+		@include v.mq(md){
+			background-position-y: bottom;
+		}
     @include v.mq(lg) {
       background-image: url(../assets/images/PC-assets/image-recruit-2.jpg);
       // transform: translateY(40px);

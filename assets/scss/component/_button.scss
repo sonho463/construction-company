@@ -3,9 +3,11 @@
 .c-button {
   display: inline-block;
   width: 76.5%;
+	max-width: 256px;
   @include v.mq(lg) {
     width: 256px;
     height: 64px;
+		max-width: unset;
   }
   height: 44px;
   margin-left: auto;

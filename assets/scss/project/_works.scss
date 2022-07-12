@@ -14,6 +14,7 @@
     @include v.mq(lg) {
       margin-top: 37px;
       width: 19%;
+			min-width: 256px;
     }
   }
   .c-button__text {
@@ -103,6 +104,9 @@
   display: flex;
   align-items: flex-end;
   background-size: cover;
+	@include v.mq(md){
+		height: 300px;
+	}
   @include v.mq(lg) {
     height: 240px;
     align-items: flex-start;

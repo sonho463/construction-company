@@ -86,9 +86,12 @@
 }
 
 .p-contact__item {
+	max-width: 375px;
+	margin-right: auto;
+	margin-left: auto;
   @include v.mq(lg) {
-    width: 23.4%;
     width: 26.3%;
+		max-width: unset;
   }
   &:first-of-type {
     .p-contact__link {

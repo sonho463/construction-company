@@ -202,10 +202,12 @@
 
 .p-mv__news-container {
   width: 100%;
+	max-width: 500px;
   margin-top: 135px;
   @include v.mq(lg) {
     display: flex;
     // margin-top: 122px;
+		max-width: unset;
 		position: absolute;
 		width: 71.7%;
 		bottom: 5%;
@@ -254,6 +256,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+	@include v.mq(md){
+		justify-content: flex-start;
+	}
   @include v.mq(lg) {
     margin-left: -55px;
     flex: 1;
@@ -292,9 +297,17 @@
     background-color: #b8614b;
     color: v.$color-white;
     font-size: 1.2rem;
+		@include v.mq(md){
+			margin: 0 24px 0 24px;
+		}
     @include v.mq(lg) {
       margin: 0 24px;
       padding: 4px 17px;
     }
   }
+	&__excerpt{
+		@include v.mq(md){
+			max-width: 280px;
+		}
+	}
 }
