@@ -120,9 +120,10 @@
   height: 611px;
   padding: 100px 5.1% 0;
   @include v.mq(lg) {
-    height: 688px;
+		height: 688px;
     // background-image: url(../assets/images/PC-assets/top-image-1.png);
     padding: 98px 13% 0;
+		padding: 4% 13% 0;
   }
 }
 
@@ -204,7 +205,12 @@
   margin-top: 135px;
   @include v.mq(lg) {
     display: flex;
-    margin-top: 122px;
+    // margin-top: 122px;
+		position: absolute;
+		width: 71.7%;
+		bottom: 5%;
+		left: 47.5%;
+		transform: translateX(-50%);
   }
 }
 

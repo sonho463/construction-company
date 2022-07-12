@@ -37,11 +37,18 @@
   }
 }
 
-
 @include v.mq(lg) {
   .p-about__bg-image {
+    height: 656px;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
+		picture{
+			height: 100%;
+		}
+		img{
+			max-width: unset;
+			height: 100%;
+		}
   }
 
   .p-about__text-content {
@@ -51,6 +58,9 @@
     width: 36.9%;
     background-color: #fff;
     padding: 15px 3.5% 46px;
+		@include v.mq(lg){
+			min-width: 460px;
+		}
   }
 }
 
