@@ -15,6 +15,7 @@
       justify-content: center;
     }
     .c-section__desc {
+			font-family: 'Noto Sans JP';
       text-align: center;
     }
   }
@@ -43,8 +44,8 @@
 @include v.mq(lg) {
   .p-contact__list {
     display: flex;
-    justify-content: center;
-    gap: 6.8%;
+    justify-content: space-between;
+    // gap: 6.8%;
   }
 }
 
@@ -90,7 +91,7 @@
 	margin-right: auto;
 	margin-left: auto;
   @include v.mq(lg) {
-    width: 26.3%;
+    width: 40%;
 		max-width: unset;
   }
   &:first-of-type {

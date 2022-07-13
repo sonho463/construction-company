@@ -19,6 +19,7 @@
   }
   .c-button__text {
     margin-right: 8px;
+		font-family: 'Noto Sans JP';
     @include v.mq(lg) {
       margin-right: 16px;
     }

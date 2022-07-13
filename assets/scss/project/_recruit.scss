@@ -54,10 +54,12 @@
 		margin-left: auto;
 	}
   @include v.mq(lg) {
-    width: 22.8%;
-    width: 312px;
+    width: 31.8%;
+    // width: 312px;
     height: 240px;
     padding-top: 206px;
+		margin-right: unset;
+		margin-left: unset;
   }
   &:first-of-type {
     background-image: url(../assets/images/SP-assets/image-recruit-1.jpg);

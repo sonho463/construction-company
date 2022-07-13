@@ -878,7 +878,7 @@ a:hover img {
 }
 
 .l-footer__item__text {
-  font-family: NotoSansJP;
+  font-family: "Noto Sans JP";
   font-size: 14px;
   line-height: 2.65;
 }
@@ -933,6 +933,7 @@ a:hover img {
 
 .c-inner {
   width: 89.3%;
+  width: 72%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -963,8 +964,8 @@ a:hover img {
   }
 }
 .c-section__ja-heading {
+  font-family: "Noto Sans JP";
   margin-left: 7px;
-  font-family: NotoSansJP;
   font-size: 20px;
   font-weight: 500;
   color: #4b6cb7;
@@ -1047,8 +1048,8 @@ a:hover img {
   height: 6px;
 }
 .c-button__text {
+  font-family: "Noto Sans JP";
   margin: 0 18px 0 0;
-  font-family: NotoSansJP;
   font-size: 14px;
   line-height: 1;
   text-align: left;
@@ -1734,6 +1735,14 @@ a:hover img {
     top: 40px;
     width: 46%;
   }
+  .p-services__image picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .p-services__text-content {
@@ -1806,13 +1815,14 @@ a:hover img {
     height: 656px;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
+    overflow: hidden;
   }
   .p-about__bg-image picture {
     height: 100%;
   }
   .p-about__bg-image img {
     max-width: unset;
-    height: 100%;
+    width: 100%;
   }
   .p-about__text-content {
     position: absolute;
@@ -1826,6 +1836,8 @@ a:hover img {
 @media screen and (min-width:1024px) and (min-width:1024px) {
   .p-about__text-content {
     min-width: 460px;
+    max-width: 504px;
+    padding: 15px 2.8% 46px;
   }
 }
 .p-about__bottom-image {
@@ -1861,6 +1873,7 @@ a:hover img {
 }
 .p-works .c-button__text {
   margin-right: 8px;
+  font-family: "Noto Sans JP";
 }
 @media screen and (min-width:1024px) {
   .p-works .c-button__text {
@@ -2112,10 +2125,11 @@ a:hover img {
 }
 @media screen and (min-width:1024px) {
   .p-recruit__item {
-    width: 22.8%;
-    width: 312px;
+    width: 31.8%;
     height: 240px;
     padding-top: 206px;
+    margin-right: unset;
+    margin-left: unset;
   }
 }
 .p-recruit__item:first-of-type {
@@ -2207,6 +2221,7 @@ a:hover img {
             justify-content: center;
   }
   .p-contact .c-section__desc {
+    font-family: "Noto Sans JP";
     text-align: center;
   }
 }
@@ -2234,10 +2249,9 @@ a:hover img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 6.8%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .p-contact__link {
@@ -2297,7 +2311,7 @@ a:hover img {
 }
 @media screen and (min-width:1024px) {
   .p-contact__item {
-    width: 26.3%;
+    width: 40%;
     max-width: unset;
   }
 }
