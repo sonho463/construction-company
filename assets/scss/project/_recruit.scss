@@ -46,6 +46,8 @@
   background-repeat: no-repeat;
   height: 200px;
   padding: 168px 0 16px 21px;
+	margin-right: calc(50% - 50vw);
+	margin-left: calc(50% - 50vw);
 	@include v.mq(md){
 		height: 300px;
 		padding-top: 260px;
@@ -55,7 +57,7 @@
 	}
   @include v.mq(lg) {
     width: 31.8%;
-    // width: 312px;
+    max-width: 312px;
     height: 240px;
     padding-top: 206px;
 		margin-right: unset;

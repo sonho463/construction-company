@@ -31,32 +31,34 @@ headerObserver.observe(mv);
 // タイトルアニメーション
 const titleObserver = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
-    if (e.isIntersecting && !e.target.classList.contains('slideLeft')) {
+    if (e.isIntersecting && !e.target.classList.contains("slideLeft")) {
       console.log(e.target);
       e.target.classList.add("slideLeft");
     }
   });
 });
-const animateTitles = document.querySelectorAll('.c-section__heading-block');
-animateTitles.forEach((t)=>{
-	titleObserver.observe(t);
-})
+const animateTitles = document.querySelectorAll(".c-section__heading-block");
+animateTitles.forEach((t) => {
+  titleObserver.observe(t);
+});
 
 // 画像のアニメーション
-const imageObserver = new IntersectionObserver((entries)=>{
-	entries.forEach((e)=>{
-		if (e.isIntersecting && !e.target.classList.contains('fadeUp')) {
+const imgOptions = {
+  rootMargin: "40%",
+};
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting && !e.target.classList.contains("fadeUp")) {
       console.log(e.target);
       e.target.classList.add("fadeUp");
     }
-	})
-})
-const animateImages = document.querySelectorAll('.js-animate-image');
-animateImages.forEach((t)=>{
-	console.log(t.target);
-	imageObserver.observe(t);
-})
-
+  });
+}, imgOptions);
+const animateImages = document.querySelectorAll(".js-animate-image");
+animateImages.forEach((t) => {
+  console.log(t.target);
+  imageObserver.observe(t);
+});
 
 // ハンバーガーメニューオープン
 const hamOpenAction = () => {

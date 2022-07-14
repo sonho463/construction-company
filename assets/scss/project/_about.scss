@@ -37,6 +37,11 @@
   }
 }
 
+.p-about__bg-image{
+	margin-right: auto;
+	margin-left: auto;
+}
+
 @include v.mq(lg) {
   .p-about__bg-image {
     height: 656px;
